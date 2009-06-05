@@ -37,7 +37,7 @@ namespace SolutionZipper
 
         public List<string> GetRelevantItemsFullFileNames()
         {
-            return GetRelevantItemsFullFileNamesWorker().ToList();
+            return GetRelevantItemsFullFileNamesWorker().Distinct().ToList();
         }
 
         private IEnumerable<string> GetRelevantItemsFullFileNamesWorker()
@@ -55,7 +55,7 @@ namespace SolutionZipper
             IEnumerable<string> solutionItems = GetSolutionItems(allLines);
             IEnumerable<string> csharpProjectItems = GetCsharpProjectItems(allLines);
             IEnumerable<string> setupProjectItems = GetSetupProjectItems(allLines);
-            return csharpProjectItems.UnionDistinct(setupProjectItems); 
+            return solutionItems.Union(csharpProjectItems.Union(setupProjectItems)); 
         }
 
         private string GetItemFromTo(string line, string from, string to)
