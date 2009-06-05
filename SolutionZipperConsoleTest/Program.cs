@@ -13,7 +13,7 @@ namespace SolutionZipperConsoleTest
         {
             try
             {
-                Test1();
+                Test3();
             }
             catch (Exception ex)
             {
@@ -39,5 +39,15 @@ namespace SolutionZipperConsoleTest
         {
             Console.WriteLine(File.Exists(Path.Combine(@"C:\Projects\KbhKommune.Ask.backup\CrmDataGateway", @"..\microsoft.crm.sdktypeproxy.dll")));
         }
+
+        private static void Test3()
+        {
+            using (var controller = new SolZipController(@"C:\Funky.zip"))
+            {
+                controller.ZipSolution(@"C:\Projects\CReMeSoFa\CReMeSoFa.sln");
+            }
+
+        }
+
     }
 }

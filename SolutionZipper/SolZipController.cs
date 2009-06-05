@@ -50,11 +50,58 @@ namespace SolutionZipper
 
         public void ZipSolution(string solutionFile)
         {
-            SetTopPathFromFile(solutionFile); 
+            if (!solutionFile.EndsWith(SolZipConstants.SolutionExtension))
+                throw new ArgumentException(
+                    string.Format("ZipSolution can only zip {0} files - not {1}",
+                        SolZipConstants.SolutionExtension, solutionFile), "solutionFile");
+
+            SetTopPathFromFile(solutionFile);
+            IEnumerable<string> files = null;
+            using (var reader = new SolutionFileReader(solutionFile))
+            {
+                files = reader.GetRelevantItemsFullFileNames();
+                foreach (string file in files)
+                {
+                    if (file.EndsWith(SolZipConstants.CsharpProjectExtension))
+                    {
+                        ZipProject(file);
+                    }
+                    else if (file.EndsWith(SolZipConstants.SetupProjectExtension))
+                    {
+                        ZipSetupProject(file);
+                    }
+                    else
+                    {
+                        ZipFile(file);
+                    }
+                 }
+            }
+            ZipFile(solutionFile);
+        }
+
+        public void ZipSetupProject(string projectFile)
+        {
+            if (!projectFile.EndsWith(SolZipConstants.SetupProjectExtension))
+                throw new ArgumentException(
+                    string.Format("ZipSetupProject can only zip {0} files - not {1}",
+                        SolZipConstants.SetupProjectExtension, projectFile), "projectFile");
+            
+            SetTopPathFromFile(projectFile);
+            string setupDir = Path.GetDirectoryName(projectFile);
+            string[] filesIndDir = Directory.GetFiles(setupDir, "*", SearchOption.TopDirectoryOnly);
+            foreach (string file in filesIndDir)
+            {
+                ZipFile(file);
+            }
         }
 
         public void ZipProject(string projectFile)
         {
+            if (!projectFile.EndsWith(SolZipConstants.CsharpProjectExtension))
+                throw new ArgumentException(
+                    string.Format("ZipProject can only zip {0} files - not {1}", 
+                        SolZipConstants.CsharpProjectExtension, projectFile), "projectFile");  
+
             SetTopPathFromFile(projectFile);
 
             XDocument projDoc = XDocument.Load(projectFile);
@@ -85,7 +132,14 @@ namespace SolutionZipper
         public void ZipFile(string fileName)
         {
             SetTopPathFromFile(fileName);
-            //We will only do it if this file is under the Top folder.
+            if (!File.Exists(fileName))
+            {
+                //This might be an Empty folder
+                ZipEmptyFolder(fileName);
+                return;
+            }
+
+            //We will only do it if this file is under the Top folder, and it exists
             if (fileName.StartsWith(BeginingOfPath))
             {
                 byte[] fileArray = ReadFile(fileName);
@@ -96,8 +150,20 @@ namespace SolutionZipper
             }
         }
 
+        private void ZipEmptyFolder(string folderName)
+        {
+            if (Directory.Exists(folderName))
+            {
+                ZipEntry entry = m_ZipEntryFactory.MakeDirectoryEntry(ZipEntry.CleanName(ZipEntryFileName(folderName)));
+                m_ZipStream.PutNextEntry(entry);
+            }
+        }
+
         public byte[] ReadFile(string fileName)
         {
+            if (fileName.Contains("Service References"))
+                Console.WriteLine(fileName);
+
             using (var file = new FileStream(fileName, FileMode.Open, FileAccess.Read))
             {
                 byte[] bar = new byte[file.Length];
@@ -158,8 +224,6 @@ namespace SolutionZipper
         /// </summary>
         protected virtual void FreeManaged()
         {
-            //m_ZipStream.Flush();
-            //m_ZipStream.Finish(); 
             m_ZipStream.Close();
             m_FileStream.Dispose();
         }
