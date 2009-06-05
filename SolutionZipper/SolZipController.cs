@@ -161,9 +161,6 @@ namespace SolutionZipper
 
         public byte[] ReadFile(string fileName)
         {
-            if (fileName.Contains("Service References"))
-                Console.WriteLine(fileName);
-
             using (var file = new FileStream(fileName, FileMode.Open, FileAccess.Read))
             {
                 byte[] bar = new byte[file.Length];
