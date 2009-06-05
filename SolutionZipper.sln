@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionZipper", "SolutionZipper\SolutionZipper.csproj", "{FAECC790-26DC-4948-AF3A-D2EB9D750B16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8F52CA03-0103-432D-89C4-1354D819BD62}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\ICSharpCode.SharpZipLib.dll = Lib\ICSharpCode.SharpZipLib.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionZipperConsoleTest", "SolutionZipperConsoleTest\SolutionZipperConsoleTest.csproj", "{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
