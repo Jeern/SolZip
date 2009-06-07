@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
 
-[assembly: AssemblyTitle("SunZip")]
+[assembly: AssemblyTitle("SolZipGuidance")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]

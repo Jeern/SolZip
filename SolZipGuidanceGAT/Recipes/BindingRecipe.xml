@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Recipe xmlns="http://schemas.microsoft.com/pag/gax-core"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        Name="BindingRecipe">
+  <xi:include href="TypeAliases.xml"/>
+  <Caption>Creates unbound references to the guidance package</Caption>
+  <Actions>
+    <Action Name="ZipRef"
+        Type="RefCreator"
+        AssetName="Zip"
+        ReferenceType="SolZipGuidance.References.ZipReference, SolZipGuidance" />
+  </Actions>
+</Recipe>

@@ -5,12 +5,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionZipper", "SolutionZ
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8F52CA03-0103-432D-89C4-1354D819BD62}"
 	ProjectSection(SolutionItems) = preProject
+		Lib\GlobalAssemblyInfo.cs = Lib\GlobalAssemblyInfo.cs
 		Lib\ICSharpCode.SharpZipLib.dll = Lib\ICSharpCode.SharpZipLib.dll
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionZipperConsoleTest", "SolutionZipperConsoleTest\SolutionZipperConsoleTest.csproj", "{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunZip", "SunZip\SunZip.csproj", "{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipGuidanceGAT", "SolZipGuidanceGAT\SolZipGuidanceGAT.csproj", "{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E29E128A-8211-47F8-95E4-B914181215D2} = {E29E128A-8211-47F8-95E4-B914181215D2}
+		{BFF3F2EC-983C-4E3A-90B8-137879C25211} = {BFF3F2EC-983C-4E3A-90B8-137879C25211}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipGuidanceGATInstaller", "SolZipGuidanceGATInstaller\SolZipGuidanceGATInstaller.csproj", "{BFF3F2EC-983C-4E3A-90B8-137879C25211}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SolZipGuidanceGATSetup", "SolZipGuidanceGATSetup\SolZipGuidanceGATSetup.vdproj", "{E218F721-46C4-453F-9E05-918F20DC33B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipGuidance", "SolZipGuidance\SolZipGuidance.csproj", "{E29E128A-8211-47F8-95E4-B914181215D2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BFF3F2EC-983C-4E3A-90B8-137879C25211} = {BFF3F2EC-983C-4E3A-90B8-137879C25211}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +46,22 @@ Global
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF3F2EC-983C-4E3A-90B8-137879C25211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF3F2EC-983C-4E3A-90B8-137879C25211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF3F2EC-983C-4E3A-90B8-137879C25211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF3F2EC-983C-4E3A-90B8-137879C25211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E218F721-46C4-453F-9E05-918F20DC33B5}.Debug|Any CPU.ActiveCfg = Debug
+		{E218F721-46C4-453F-9E05-918F20DC33B5}.Debug|Any CPU.Build.0 = Debug
+		{E218F721-46C4-453F-9E05-918F20DC33B5}.Release|Any CPU.ActiveCfg = Release
+		{E218F721-46C4-453F-9E05-918F20DC33B5}.Release|Any CPU.Build.0 = Release
+		{E29E128A-8211-47F8-95E4-B914181215D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E29E128A-8211-47F8-95E4-B914181215D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E29E128A-8211-47F8-95E4-B914181215D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E29E128A-8211-47F8-95E4-B914181215D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

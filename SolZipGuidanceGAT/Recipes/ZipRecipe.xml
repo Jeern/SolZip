@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Recipe xmlns="http://schemas.microsoft.com/pag/gax-core"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        Name="Zip" Bound="false">
+  <xi:include href="TypeAliases.xml"/>
+  <Caption>Compress with Zip...</Caption>
+  <HostData>
+    <Icon ID="602" />
+    <CommandBar Menu="SZGSolution" />
+    <CommandBar Menu="SZGProject" />
+    <CommandBar Menu="SZGItem" />
+  </HostData>
+  <Arguments>
+    <Argument Name="ZipFileName" />
+    <Argument Name="FileToZip" />
+      <!--<ValueProvider Type="Logica.CReMeSoFa.ValueProviders.PascalCaseProvider, Logica.CReMeSoFa"
+        FromArgument="EntityName">
+        <MonitorArgument Name="EntityName" />
+      </ValueProvider>
+    </Argument>
+    <Argument Name="WsdlFileFullName">
+      <ValueProvider Type="Logica.CReMeSoFa.ValueProviders.FullFileNameProvider, Logica.CReMeSoFa"
+              ProjectName="CrmDataGateway" FileName="CrmServiceWsdl.wsdl">
+      </ValueProvider>
+    </Argument>
+    <Argument Name="CrmDataGatewayProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <ValueProvider Type="Microsoft.Practices.RecipeFramework.Extensions.ValueProviders.VisualStudio.ProjectByNameProvider, Microsoft.Practices.RecipeFramework.Extensions"
+              Name="CrmDataGateway" >
+      </ValueProvider>
+    </Argument>
+    <Argument Name="CrmConnectionString">
+      <ValueProvider Type="Logica.CReMeSoFa.ValueProviders.GetGlobalValueProvider, Logica.CReMeSoFa"
+				VariableName="CrmConnectionString" />
+    </Argument>
+    <Argument Name="NewConnectionString">
+      <ValueProvider Type="Evaluator"
+					 Expression="$(CrmConnectionString)">
+      </ValueProvider>
+    </Argument>
+    <Argument Name="GenerateCustomOnly" Type="System.Boolean">
+      <ValueProvider Type="Evaluator" Expression="True">
+      </ValueProvider>
+    </Argument>
+    <Argument Name="RootNamespace">
+      <ValueProvider Type="Microsoft.Practices.RecipeFramework.Library.ValueProviders.GlobalValueProvider, Microsoft.Practices.RecipeFramework.Library"
+        Key="RootNamespace" />
+    </Argument>
+    <Argument Name="TargetClassFile">
+      <ValueProvider Type="Evaluator"
+					 Expression="$(EntityNamePascalCase).cs" Stage="OnBeforeActions">
+      </ValueProvider>
+    </Argument>
+    <Argument Name="TargetInterfaceFile">
+      <ValueProvider Type="Evaluator"
+					 Expression="I$(EntityNamePascalCase).cs" Stage="OnBeforeActions">
+      </ValueProvider>
+    </Argument>-->
+  </Arguments>
+  <GatheringServiceData>
+    <Wizard xmlns="http://schemas.microsoft.com/pag/gax-wizards" SchemaVersion="1.0" Help="">
+      <Pages>
+        <Page>
+          <Title>Choose name of Zip file</Title>
+          <LinkTitle>Zip</LinkTitle>
+          <Fields>
+            <Field Label="Entity" ValueName="ZipFileName">
+              <Editor Type="Logica.CReMeSoFa.Editors.EntityChooser.EntityChooser, Logica.CReMeSoFa" />
+            </Field>
+          </Fields>
+        </Page>
+      </Pages>
+    </Wizard>
+  </GatheringServiceData>
+  <Actions>
+    <Action Name="ExecuteZip" Type="SolZipGuidance.Actions.ZipAction, SolZipGuidance" >
+      <Input Name="ZipFileName" RecipeArgument="ZipFileName" />
+      <Input Name="FileToZip" RecipeArgument="FileToZip" />
+    </Action>
+  </Actions>
+</Recipe>
