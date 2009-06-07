@@ -1,5 +1,5 @@
-﻿using System.Reflection;
+using System.Reflection;
 
-[assembly: AssemblyTitle("SunZip")]
+[assembly: AssemblyTitle("SolZipGuidanceGAT")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
