@@ -20,5 +20,6 @@ namespace SolutionZipper
         public const string ProjectArgument = "/project";
         public const string SetupProjectArgument = "/setupproject";
         public const string FileArgument = "/file";
+        public const string ExcludeReadmeArgument = "/excludereadme";
     }
 }

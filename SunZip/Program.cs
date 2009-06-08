@@ -46,6 +46,7 @@ namespace SunZip
         {
             Console.WriteLine("SunZip usage:");
             Console.WriteLine("    {0} To Display help - same as no arguments", SolZipConstants.HelpArgument);
+            Console.WriteLine("    {0} - this means that the SolutionZipper readme.txt will not be added to Archive", SolZipConstants.ExcludeReadmeArgument);
             Console.WriteLine("    {0}:\"name\" The filename of the ZipFile.", SolZipConstants.ZipFileArgument);
             Console.WriteLine("    {0}:\"name\" The filename of the solution to Zip.", SolZipConstants.SolutionArgument);
             Console.WriteLine("    {0}:\"name\" The filename of the C# Project to Zip.", SolZipConstants.ProjectArgument);
@@ -74,7 +75,7 @@ namespace SunZip
 
         /// <summary>
         /// Number of correct arguments must equal one, since only one of Solution, Project, SetupProject, File is allowed
-        /// This method counts the number of correct arguments. /zipfile is not counted, since it is optional.
+        /// This method counts the number of correct arguments. /zipfile and /excludereadme are not counted, since they are optional.
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
@@ -85,7 +86,7 @@ namespace SunZip
                 SolZipConstants.SetupProjectArgument, SolZipConstants.FileArgument };
             foreach (var arg in args.Keys)
             {
-                if (arg == SolZipConstants.ZipFileArgument)
+                if (arg == SolZipConstants.ZipFileArgument || arg == SolZipConstants.ExcludeReadmeArgument)
                 {
                     //OK, not counted since it is optional
                 }
@@ -140,6 +141,11 @@ namespace SunZip
             return GetArgument(args, SolZipConstants.FileArgument); ;
         }
 
+        private static bool GetExcludeReadmeArgument(Dictionary<string, string> args)
+        {
+            return args.ContainsKey(SolZipConstants.ExcludeReadmeArgument);
+        }
+
         private static string GetArgument(Dictionary<string, string> args, string key)
         {
             string argValue = string.Empty;
@@ -163,25 +169,25 @@ namespace SunZip
             {
                 string zipFileName = GetZipFileName(args, solutionFile);
                 Console.WriteLine(helpText, "solution", solutionFile, zipFileName);
-                SolZipHelper.ZipSolution(GetZipFileName(args, solutionFile), solutionFile); 
+                SolZipHelper.ZipSolution(GetZipFileName(args, solutionFile), solutionFile, GetExcludeReadmeArgument(args)); 
             }
             else if (!string.IsNullOrEmpty(projectFile))
             {
                 string zipFileName = GetZipFileName(args, projectFile);
                 Console.WriteLine(helpText, "project", projectFile, zipFileName);
-                SolZipHelper.ZipProject(GetZipFileName(args, projectFile), projectFile);
+                SolZipHelper.ZipProject(GetZipFileName(args, projectFile), projectFile, GetExcludeReadmeArgument(args));
             }
             else if (!string.IsNullOrEmpty(setupProjectFile))
             {
                 string zipFileName = GetZipFileName(args, setupProjectFile);
                 Console.WriteLine(helpText, "setup project", setupProjectFile, zipFileName);
-                SolZipHelper.ZipSetupProject(GetZipFileName(args, setupProjectFile), setupProjectFile);
+                SolZipHelper.ZipSetupProject(GetZipFileName(args, setupProjectFile), setupProjectFile, GetExcludeReadmeArgument(args));
             }
             else if (!string.IsNullOrEmpty(itemFile))
             {
                 string zipFileName = GetZipFileName(args, itemFile);
                 Console.WriteLine(helpText, "file", itemFile, zipFileName);
-                SolZipHelper.ZipItem(GetZipFileName(args, itemFile), itemFile);
+                SolZipHelper.ZipItem(GetZipFileName(args, itemFile), itemFile, GetExcludeReadmeArgument(args));
             }
             Console.WriteLine("Done !");
         }

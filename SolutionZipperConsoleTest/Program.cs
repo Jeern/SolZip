@@ -28,7 +28,7 @@ namespace SolutionZipperConsoleTest
 
         private static void Test1()
         {
-            using (var controller = new SolZipController(@"C:\Funky.zip"))
+            using (var controller = new SolZipController(@"C:\Funky.zip", false))
             {
                 controller.ZipSolution(@"C:\Projects\KbhKommune.Ask.backup\KbhKommune.Ask.sln");
             }
@@ -42,7 +42,7 @@ namespace SolutionZipperConsoleTest
 
         private static void Test3()
         {
-            using (var controller = new SolZipController(@"C:\Funky.zip"))
+            using (var controller = new SolZipController(@"C:\Funky.zip", false))
             {
                 controller.ZipSolution(@"C:\Projects\CReMeSoFa\CReMeSoFa.sln");
             }

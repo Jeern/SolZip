@@ -24,7 +24,7 @@ namespace SolZipGuidance.Actions
         // Methods
         public override void Execute()
         {
-            SolZipHelper.Zip(ZipFileName, FileToZip);
+            SolZipHelper.Zip(ZipFileName, FileToZip, false);
         }
 
         public override void Undo()
