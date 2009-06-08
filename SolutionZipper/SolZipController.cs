@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using ICSharpCode.SharpZipLib.Zip;
 using System.IO;
 using System.Xml.Linq;
+using System.Reflection;
 
 namespace SolutionZipper
 {
@@ -15,6 +16,8 @@ namespace SolutionZipper
         private ZipOutputStream m_ZipStream;
         private ZipEntryFactory m_ZipEntryFactory;
         private string m_TopPath; //The Path below which we will Zip (and nowhere else)
+        private bool m_ExcludeSZReadme;
+        private bool m_SZReadmeAlreadyAdded;
 
         private string BeginingOfPath
         {
@@ -40,8 +43,9 @@ namespace SolutionZipper
             return fileName;
         }
 
-        public SolZipController(string zipFileName)
+        public SolZipController(string zipFileName, bool excludeSZReadme)
         {
+            m_ExcludeSZReadme = excludeSZReadme;
             m_TopPath = string.Empty;
             m_FileStream = new FileStream(zipFileName, FileMode.CreateNew, FileAccess.Write);
             m_ZipStream = new ZipOutputStream(m_FileStream);
@@ -132,6 +136,8 @@ namespace SolutionZipper
         public void ZipFile(string fileName)
         {
             SetTopPathFromFile(fileName);
+            AddReadme(m_TopPath, m_ExcludeSZReadme);
+
             if (!File.Exists(fileName))
             {
                 //This might be an Empty folder
@@ -176,6 +182,44 @@ namespace SolutionZipper
                 m_TopPath = Path.GetDirectoryName(file);
             }
         }
+
+        /// <summary>
+        /// This funny little thing adds a readme file called SZReadme.txt, which is an advertisement for SolutionZipper. 
+        /// It is optional of course. I do not want to force anyone to have an extra readme file. For now it is on here as an experiment.
+        /// </summary>
+        /// <returns></returns>
+        private void AddReadme(string topPath, bool excludeSZReadme)
+        {
+            if (excludeSZReadme || m_SZReadmeAlreadyAdded)
+                return;
+            m_SZReadmeAlreadyAdded = true;
+            
+            Stream readmeFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("SolutionZipper.readme.txt");
+            byte[] fileArray = new byte[readmeFile.Length];
+            readmeFile.Read(fileArray, 0, (int)readmeFile.Length);
+            //ZipEntry entry = m_ZipEntryFactory.MakeFileEntry(ZipEntry.CleanName(ZipEntryFileName(GetReadMeName(topPath, 0))));
+            ZipEntry entry = m_ZipEntryFactory.MakeFileEntry(ZipEntry.CleanName("SolZipReadme.txt"));
+            entry.Size = fileArray.Length;
+            m_ZipStream.PutNextEntry(entry);
+            m_ZipStream.Write(fileArray, 0, fileArray.Length);
+        }
+
+        //private string GetReadMeName(string topPath, int seed)
+        //{
+        //    string readmeFileName = string.Empty;
+        //    if(seed == 0)
+        //    {
+        //        readmeFileName = Path.Combine(topPath, "SZReadme.txt");
+        //    }
+        //    else
+        //    {
+        //        readmeFileName = Path.Combine(topPath, string.Format("SZReadme{0}.txt", seed.ToString()));
+        //    }
+        //    if(File.Exists(readmeFileName))
+        //        return GetReadMeName(topPath, seed + 1);
+
+        //    return readmeFileName;
+        //}
 
         #region Best practice disposepattern.
 
