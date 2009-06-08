@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Practices.RecipeFramework;
 using System.Runtime.Serialization;
 using EnvDTE;
+using System.IO;
 
 namespace SolZipGuidance.References
 {
@@ -18,18 +19,40 @@ namespace SolZipGuidance.References
         {
         }
 
-
         public override bool IsEnabledFor(object target)
         {
-            //Skal give true hvis det markerede er en Solution, Project eller Item
+            //Menuen skal enables hvis det markerede er en Solution, Project eller Item
+            return IsSolution(target) || IsProject(target) || IsFile(target);
+        }
+
+        private bool IsSolution(object target)
+        {
             var solution = target as Solution;
+            return (solution != null && File.Exists(solution.FileName));
+        }
+
+        private bool IsProject(object target)
+        {
             var project = target as Project;
-            var item = target as UIHierarchyItem;
+            return (project != null && File.Exists(project.FileName));
+        }
 
-            if (solution != null || project != null || item != null)
-                return true;
-
-            return false;
+        private bool IsFile(object target)
+        {
+            var file = target as ProjectItem;
+            string fileName = string.Empty;
+            if (file != null)
+            {
+                try
+                {
+                    fileName = file.get_FileNames(1);
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+            return (file != null && File.Exists(fileName));
         }
 
         public override string AppliesTo
