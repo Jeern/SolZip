@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Windows.Forms;
 
 namespace SolutionZipper
 {
@@ -118,5 +119,19 @@ namespace SolutionZipper
             Zip(GetZipFileName(fileToZip), fileToZip);
         }
 
+        public static void Zip(string zipFileName, string fileToZip, bool showFile, bool copyToClipboard, bool excludeReadme)
+        {
+            if (copyToClipboard)
+            {
+                CopyFileNameToClipboard(zipFileName);
+            }
+            Zip(zipFileName, fileToZip);
+ 
+        }
+
+        private static void CopyFileNameToClipboard(string zipFileName)
+        {
+            Clipboard.SetText(zipFileName);
+        }
     }
 }

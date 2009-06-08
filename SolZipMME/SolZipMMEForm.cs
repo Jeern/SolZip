@@ -37,7 +37,8 @@ namespace SolZipMME
         {
             try
             {
-                SolZipHelper.Zip(ZipFileTextBox.Text, FileToZipTextBox.Text);
+                SolZipHelper.Zip(ZipFileTextBox.Text, FileToZipTextBox.Text, 
+                    ShowCheckBox.Checked, ClipboardCheckBox.Checked, ExcludeCheckBox.Checked);
                 Close();
             }
             catch (Exception ex)
