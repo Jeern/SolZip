@@ -14,17 +14,17 @@ namespace SolZipGuidance.Actions
         public string Folder { get; set; }
 
         /// <summary>
-        /// Shows the explorer in the given folder.
-        /// It is very forgiven. If we provide a file it opens the folder in which the file is placed.
+        /// Shows the explorer in the given folder. If the Folder is really a file the file is opened in stead.
+        /// This is OK for a zip file.        /// 
         /// </summary>
         public override void Execute()
         {
-            if (File.Exists(Folder)) //It is really a file
-            {
-                Folder = Path.GetDirectoryName(Folder);
-            }
-            if (!Directory.Exists(Folder))
-                throw new ArgumentException("You must provide a real folder name for ShowExplorerAction", "Folder");
+            //if (File.Exists(Folder)) //It is really a file
+            //{
+            //    Folder = Path.GetDirectoryName(Folder);
+            //}
+            if (!Directory.Exists(Folder) && !File.Exists(Folder))
+                throw new ArgumentException("You must provide a real file or folder name for ShowExplorerAction", "Folder");
 
             Process.Start(Folder);
         }
