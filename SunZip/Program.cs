@@ -13,16 +13,7 @@ namespace SunZip
     class Program
     {
         /// <summary>
-        /// Allowed Arguments
-        ///     /? To Display help - same as no arguments
-        ///     /ZipFile:"name" The filename of the ZipFile. 
-        ///     /Solution:"name" The filename of the solution to Zip. 
-        ///     /Project:"name" The filename of the C# Project to Zip. 
-        ///     /SetupProject:"name" The filename of the setup project to Zip. 
-        ///     /File:"name" The file to Zip.
-        ///     Only one of /Solution, /Project and /SetupProject can be provided. If no name is provided, first item in current dir is chosen
-        ///     If full filename is not provided the file will be assumed to be in current dir.
-        ///     If no filename is provided for Zipfile a name is generated.
+        /// Zips Visual Studio Solutions, Projects and Single Files. The argument /? Displays help (as well as no arguments)
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
@@ -166,22 +157,33 @@ namespace SunZip
             string setupProjectFile = GetSetupProjectArgument(args);
             string itemFile = GetFileArgument(args); 
 
+            string helpText = "Zips The {0}: {1} to {2}";
+
             if (!string.IsNullOrEmpty(solutionFile))
             {
+                string zipFileName = GetZipFileName(args, solutionFile);
+                Console.WriteLine(helpText, "solution", solutionFile, zipFileName);
                 SolZipHelper.ZipSolution(GetZipFileName(args, solutionFile), solutionFile); 
             }
             else if (!string.IsNullOrEmpty(projectFile))
             {
+                string zipFileName = GetZipFileName(args, projectFile);
+                Console.WriteLine(helpText, "project", projectFile, zipFileName);
                 SolZipHelper.ZipProject(GetZipFileName(args, projectFile), projectFile);
             }
             else if (!string.IsNullOrEmpty(setupProjectFile))
             {
+                string zipFileName = GetZipFileName(args, setupProjectFile);
+                Console.WriteLine(helpText, "setup project", setupProjectFile, zipFileName);
                 SolZipHelper.ZipSetupProject(GetZipFileName(args, setupProjectFile), setupProjectFile);
             }
             else if (!string.IsNullOrEmpty(itemFile))
             {
+                string zipFileName = GetZipFileName(args, itemFile);
+                Console.WriteLine(helpText, "file", itemFile, zipFileName);
                 SolZipHelper.ZipItem(GetZipFileName(args, itemFile), itemFile);
             }
+            Console.WriteLine("Done !");
         }
     }
 
