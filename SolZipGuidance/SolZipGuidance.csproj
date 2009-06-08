@@ -66,6 +66,7 @@
     <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Actions\CopyToClipboardAction.cs" />
     <Compile Include="Actions\ShowExplorerAction.cs" />
     <Compile Include="Actions\ZipAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -14,6 +14,9 @@
     <Argument Name="ShowExplorer" Type="System.Boolean">
       <ValueProvider Type="Evaluator" Expression="True" />
     </Argument>
+    <Argument Name="CopyToClipboard" Type="System.Boolean">
+      <ValueProvider Type="Evaluator" Expression="True" />
+    </Argument>
     <Argument Name="FileToZip">
       <ValueProvider Type="SolZipGuidance.ValueProviders.FileNameOfSelectedItemProvider, SolZipGuidance" />
     </Argument>
@@ -31,6 +34,7 @@
             <Field Label="File to Zip" ValueName="FileToZip" />
             <Field Label="Name of Zipfile" ValueName="ZipFileName" />
             <Field Label="Show resulting file" ValueName="ShowExplorer" />
+            <Field Label="Copy path to Clipboard" ValueName="CopyToClipboard" />
           </Fields>
         </Page>
       </Pages>
@@ -43,6 +47,9 @@
     </Action>
     <Action Name="ShowExplorer" Type="SolZipGuidance.Actions.ShowExplorerAction, SolZipGuidance" Condition="$(ShowExplorer)" >
       <Input Name="Folder" RecipeArgument="ZipFileName" />
+    </Action>
+    <Action Name="CopyTextToClipBoard" Type="SolZipGuidance.Actions.CopyToClipboardAction, SolZipGuidance" Condition="$(CopyToClipboard)" >
+      <Input Name="TextToCopy" RecipeArgument="ZipFileName" />
     </Action>
   </Actions>
 </Recipe>
