@@ -46,7 +46,7 @@ namespace SunZip
         {
             Console.WriteLine("SunZip usage:");
             Console.WriteLine("    {0} To Display help - same as no arguments", SolZipConstants.HelpArgument);
-            Console.WriteLine("    {0} - this means that the SolutionZipper readme.txt will not be added to Archive", SolZipConstants.ExcludeReadmeArgument);
+            Console.WriteLine("    {0} - this means that SolZipReadme.txt will not be added to Archive", SolZipConstants.ExcludeReadmeArgument);
             Console.WriteLine("    {0}:\"name\" The filename of the ZipFile.", SolZipConstants.ZipFileArgument);
             Console.WriteLine("    {0}:\"name\" The filename of the solution to Zip.", SolZipConstants.SolutionArgument);
             Console.WriteLine("    {0}:\"name\" The filename of the C# Project to Zip.", SolZipConstants.ProjectArgument);

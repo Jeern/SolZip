@@ -130,9 +130,9 @@
             this.ExcludeCheckBox.AutoSize = true;
             this.ExcludeCheckBox.Location = new System.Drawing.Point(19, 120);
             this.ExcludeCheckBox.Name = "ExcludeCheckBox";
-            this.ExcludeCheckBox.Size = new System.Drawing.Size(192, 17);
+            this.ExcludeCheckBox.Size = new System.Drawing.Size(151, 17);
             this.ExcludeCheckBox.TabIndex = 8;
-            this.ExcludeCheckBox.Text = "Exclude SolutionZippers readme.txt";
+            this.ExcludeCheckBox.Text = "Exclude SolZipReadme.txt";
             this.ExcludeCheckBox.UseVisualStyleBackColor = true;
             // 
             // ZipItButton
