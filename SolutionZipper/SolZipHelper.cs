@@ -40,8 +40,6 @@ namespace SolutionZipper
                     return SolZipConstants.SolutionSuffix; 
                 case SolZipConstants.CsharpProjectExtension:
                     return SolZipConstants.ProjectSuffix; 
-                case SolZipConstants.SetupProjectExtension:
-                    return SolZipConstants.SetupSuffix;
                 default:
                     return SolZipConstants.ItemSuffix;
             }
@@ -63,14 +61,6 @@ namespace SolutionZipper
             using (var controller = new SolZipController(zipFileName, excludeSZReadme))
             {
                 controller.ZipFile(fileToZip);
-            }
-        }
-
-        public static void ZipSetupProject(string zipFileName, string fileToZip, bool excludeSZReadme)
-        {
-            using (var controller = new SolZipController(zipFileName, excludeSZReadme))
-            {
-                controller.ZipSetupProject(fileToZip);
             }
         }
 
@@ -101,9 +91,6 @@ namespace SolutionZipper
                         break;
                     case SolZipConstants.ProjectSuffix:
                         controller.ZipProject(fileToZip);
-                        break;
-                    case SolZipConstants.SetupSuffix:
-                        controller.ZipSetupProject(fileToZip);
                         break;
                     case SolZipConstants.ItemSuffix:
                         controller.ZipFile(fileToZip);
