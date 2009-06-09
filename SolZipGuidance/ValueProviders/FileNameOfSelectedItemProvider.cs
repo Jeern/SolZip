@@ -21,25 +21,6 @@ namespace SolZipGuidance.ValueProviders
         public override bool OnBeginRecipe(object currentValue, out object newValue)
         {
             var vs = GetService(typeof(DTE)) as DTE2;
-            //if (vs == null)
-            //{
-            //    vs.Solution.se
-            //    var solution = vs.SelectedItems.Item(1).Project as Solution;
-            //    if (solution != null)
-            //    {
-            //        newValue = solution.FileName;
-            //        return true;
-            //    }
-            //    Project project = vs.SelectedItems.Item(1).Project;
-            //    if (project != null)
-            //    {
-            //        newValue = project.FileName;
-            //        return true;
-            //    }
-            //    newValue = vs.SelectedItems.Item(1).ProjectItem.get_FileNames(1);
-            //    return true;
-            //}
-            //return false;
             UIHierarchyItem selectedItem = SelectedItem(vs);
             var solution = selectedItem.Object as Solution;
             if (solution != null)
@@ -49,7 +30,7 @@ namespace SolZipGuidance.ValueProviders
             }
             else
             {
-                var project = selectedItem.Object as Project;
+                var project = GetProject(selectedItem.Object);
                 if (project != null)
                 {
                     newValue = project.FileName;
@@ -57,6 +38,8 @@ namespace SolZipGuidance.ValueProviders
                 }
                 else
                 {
+
+
                     var item = selectedItem.Object as ProjectItem;
                     if (item != null)
                     {
@@ -83,6 +66,25 @@ namespace SolZipGuidance.ValueProviders
                 return null;
 
             return items[0] as UIHierarchyItem;
+        }
+
+        /// <summary>
+        /// Returns af project. Because of problems with Projects that are subprojects of solution folders
+        /// it is not as easy as casting. Instead we must do some more magic.
+        /// </summary>
+        /// <param name="selectedItemObject"></param>
+        /// <returns></returns>
+        private Project GetProject(object selectedItemObject)
+        {
+            var project = selectedItemObject as Project;
+            if (project != null)
+                return project;
+
+            var item = selectedItemObject as ProjectItem;
+            if (item == null)
+                return null;
+
+            return item.SubProject;
         }
     }
 }
