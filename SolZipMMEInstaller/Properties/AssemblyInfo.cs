@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
 
-[assembly: AssemblyTitle("SolZipMME")]
+[assembly: AssemblyTitle("SolZipMMEInstaller")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
