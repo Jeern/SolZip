@@ -20,11 +20,14 @@ namespace SolZipGuidance.Actions
         [Input(Required = true)]
         public string FileToZip { get; set; }
 
+        [Input(Required = true)]
+        public bool ExcludeReadme { get; set; }
+        
 
         // Methods
         public override void Execute()
         {
-            SolZipHelper.Zip(ZipFileName, FileToZip, false);
+            SolZipHelper.Zip(ZipFileName, FileToZip, ExcludeReadme);
         }
 
         public override void Undo()
