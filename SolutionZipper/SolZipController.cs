@@ -18,6 +18,7 @@ namespace SolutionZipper
         private string m_TopPath; //The Path below which we will Zip (and nowhere else)
         private bool m_ExcludeSZReadme;
         private bool m_SZReadmeAlreadyAdded;
+        private bool m_SolutionOrProject = false; //True if this Zip is a solution or project
 
         private string BeginingOfPath
         {
@@ -59,6 +60,7 @@ namespace SolutionZipper
                     string.Format("ZipSolution can only zip {0} files - not {1}",
                         SolZipConstants.SolutionExtension, solutionFile), "solutionFile");
 
+            m_SolutionOrProject = true;
             SetTopPathFromFile(solutionFile);
             IEnumerable<string> files = null;
             using (var reader = new SolutionFileReader(solutionFile))
@@ -104,8 +106,9 @@ namespace SolutionZipper
             if (!projectFile.EndsWith(SolZipConstants.CsharpProjectExtension))
                 throw new ArgumentException(
                     string.Format("ZipProject can only zip {0} files - not {1}", 
-                        SolZipConstants.CsharpProjectExtension, projectFile), "projectFile");  
+                        SolZipConstants.CsharpProjectExtension, projectFile), "projectFile");
 
+            m_SolutionOrProject = true;
             SetTopPathFromFile(projectFile);
 
             XDocument projDoc = XDocument.Load(projectFile);
@@ -190,7 +193,7 @@ namespace SolutionZipper
         /// <returns></returns>
         private void AddReadme(string topPath, bool excludeSZReadme)
         {
-            if (excludeSZReadme || m_SZReadmeAlreadyAdded)
+            if (excludeSZReadme || m_SZReadmeAlreadyAdded || !m_SolutionOrProject)
                 return;
             m_SZReadmeAlreadyAdded = true;
             

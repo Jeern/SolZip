@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ManagedMenuAddInViews, Version=0.1.2.0, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL">
+    <Reference Include="ManagedMenuAddInViews, Version=0.1.2.1, Culture=neutral, PublicKeyToken=f383dc8b57937be2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\ManagedMenuAddInViews.dll</HintPath>
     </Reference>

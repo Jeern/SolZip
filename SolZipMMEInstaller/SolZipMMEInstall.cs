@@ -15,13 +15,14 @@ namespace SolZipMMEInstaller
     public class SolZipMMEInstall : Installer
     {
 
-        private const string AddInRegKey = @"Software\Jern\ManagedMenExtensions";
+        private const string AddInRegKey = @"Software\Jern\ManagedMenuExtensions";
         private const string AddInRegValueKey = "AddInMainDirectory";
         private const string AddInSubDir = "AddIns";
         private const string NewDir = "SoLZip";
         private const string TargetAssemblyKey = "assemblypath";
         private const string SearchString = "*.dll";
-        private const string ExcludeString = "Installer.dll";
+        private const string ExcludeString1 = "Installer.dll";
+        private const string ExcludeString2 = "ManagedMenuAddInViews.dll"; //Excluded because already in GAC
         private const string ArrayKey = "NewFiles";
 
         protected override void OnAfterInstall(IDictionary savedState)
@@ -43,7 +44,7 @@ namespace SolZipMMEInstaller
                     {
                         string[] files =
                             Directory.GetFiles(copyFrom, SearchString, SearchOption.TopDirectoryOnly)
-                                .Where(f => !f.EndsWith(ExcludeString)).ToArray();
+                                .Where(f => (!f.EndsWith(ExcludeString1) && !f.EndsWith(ExcludeString2))).ToArray();
 
                         string[] newFiles = new string[files.Length];
                         for (int i = 0; i < files.Length; i++)
