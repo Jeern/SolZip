@@ -142,16 +142,29 @@ namespace SunZip
 
         private static string GetArgument(Dictionary<string, string> args, string key, string pattern)
         {
-            string argValue = string.Empty;
+            string fileName = string.Empty;
             if (args.ContainsKey(key))
             {
-                argValue = args[key];
-                if (string.IsNullOrEmpty(argValue))
+                fileName = args[key];
+                if (string.IsNullOrEmpty(fileName))
                 {
-                    argValue = FindFirstFileWithPattern(pattern);
+                    fileName = FindFirstFileWithPattern(pattern);
+                }
+                if (!string.IsNullOrEmpty(fileName))
+                {
+                    if (File.Exists(fileName))
+                    {
+                        var fileInfo = new FileInfo(fileName);
+                        fileName = fileInfo.FullName;
+                    }
+                    else
+                    {
+                        Console.WriteLine("File {0} does not exist", fileName);
+                        fileName = string.Empty;
+                    }
                 }
             }
-            return argValue;
+            return fileName;
         }
 
         private static void Zip(Dictionary<string, string> args)
@@ -182,21 +195,6 @@ namespace SunZip
             }
             Console.WriteLine("Done !");
         }
-
-        //private string FindFirstSolution()
-        //{
-        //    return FindFirstFileWithPattern("*" + SolZipConstants.SolutionExtension); 
-        //}
-
-        //private string FindFirstProject()
-        //{
-        //    return FindFirstFileWithPattern("*" + SolZipConstants.ProjectExtension);
-        //}
-
-        //private string FindFirstFile()
-        //{
-        //    return FindFirstFileWithPattern("*.*");
-        //}
 
         private static string FindFirstFileWithPattern(string pattern)
         {
