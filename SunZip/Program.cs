@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SolutionZipper;
+using System.IO;
 
 namespace SunZip
 {
@@ -121,17 +122,17 @@ namespace SunZip
 
         private static string GetSolutionArgument(Dictionary<string, string> args)
         {
-            return GetArgument(args, SolZipConstants.SolutionArgument); ;
+            return GetArgument(args, SolZipConstants.SolutionArgument, "*" + SolZipConstants.SolutionExtension);
         }
 
         private static string GetProjectArgument(Dictionary<string, string> args)
         {
-            return GetArgument(args, SolZipConstants.ProjectArgument); ;
+            return GetArgument(args, SolZipConstants.ProjectArgument, "*" + SolZipConstants.ProjectExtension); 
         }
 
         private static string GetFileArgument(Dictionary<string, string> args)
         {
-            return GetArgument(args, SolZipConstants.FileArgument); ;
+            return GetArgument(args, SolZipConstants.FileArgument, "*.*");
         }
 
         private static bool GetExcludeReadmeArgument(Dictionary<string, string> args)
@@ -139,12 +140,16 @@ namespace SunZip
             return args.ContainsKey(SolZipConstants.ExcludeReadmeArgument);
         }
 
-        private static string GetArgument(Dictionary<string, string> args, string key)
+        private static string GetArgument(Dictionary<string, string> args, string key, string pattern)
         {
             string argValue = string.Empty;
             if (args.ContainsKey(key))
             {
                 argValue = args[key];
+                if (string.IsNullOrEmpty(argValue))
+                {
+                    argValue = FindFirstFileWithPattern(pattern);
+                }
             }
             return argValue;
         }
@@ -176,6 +181,30 @@ namespace SunZip
                 SolZipHelper.ZipItem(GetZipFileName(args, itemFile), itemFile, GetExcludeReadmeArgument(args));
             }
             Console.WriteLine("Done !");
+        }
+
+        //private string FindFirstSolution()
+        //{
+        //    return FindFirstFileWithPattern("*" + SolZipConstants.SolutionExtension); 
+        //}
+
+        //private string FindFirstProject()
+        //{
+        //    return FindFirstFileWithPattern("*" + SolZipConstants.ProjectExtension);
+        //}
+
+        //private string FindFirstFile()
+        //{
+        //    return FindFirstFileWithPattern("*.*");
+        //}
+
+        private static string FindFirstFileWithPattern(string pattern)
+        {
+            string[] files = Directory.GetFiles(Directory.GetCurrentDirectory(), pattern, SearchOption.TopDirectoryOnly);
+            if (files == null || files.Length == 0)
+                return string.Empty;
+
+            return files.First();
         }
     }
 

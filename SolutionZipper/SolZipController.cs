@@ -68,7 +68,7 @@ namespace SolutionZipper
                 files = reader.GetRelevantItemsFullFileNames();
                 foreach (string file in files)
                 {
-                    if (file.EndsWith(SolZipConstants.CsharpProjectExtension))
+                    if (file.EndsWith(SolZipConstants.ProjectExtension))
                     {
                         ZipProject(file);
                     }
@@ -103,10 +103,10 @@ namespace SolutionZipper
 
         public void ZipProject(string projectFile)
         {
-            if (!projectFile.EndsWith(SolZipConstants.CsharpProjectExtension))
+            if (!projectFile.EndsWith(SolZipConstants.ProjectExtension))
                 throw new ArgumentException(
                     string.Format("ZipProject can only zip {0} files - not {1}", 
-                        SolZipConstants.CsharpProjectExtension, projectFile), "projectFile");
+                        SolZipConstants.ProjectExtension, projectFile), "projectFile");
 
             m_SolutionOrProject = true;
             SetTopPathFromFile(projectFile);

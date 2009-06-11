@@ -38,7 +38,7 @@ namespace SolutionZipper
             {
                 case SolZipConstants.SolutionExtension:
                     return SolZipConstants.SolutionSuffix; 
-                case SolZipConstants.CsharpProjectExtension:
+                case SolZipConstants.ProjectExtension:
                     return SolZipConstants.ProjectSuffix; 
                 default:
                     return SolZipConstants.ItemSuffix;
