@@ -87,14 +87,14 @@ namespace SolutionZipper
             IEnumerable<string> projectLines = GetCsharpProjectLines(lines);
             foreach (string line in projectLines)
             {
-                yield return GetItemFromTo(line, "\"", SolZipConstants.CsharpProjectExtension);
+                yield return GetItemFromTo(line, "\"", SolZipConstants.ProjectExtension);
             }
         }
 
 
         private IEnumerable<string> GetCsharpProjectLines(IEnumerable<string> lines)
         {
-            return GetLineContaining(lines, SolZipConstants.CsharpProjectExtension +  "\"");
+            return GetLineContaining(lines, SolZipConstants.ProjectExtension +  "\"");
         }
 
         private IEnumerable<string> GetSetupProjectItems(IEnumerable<string> lines)

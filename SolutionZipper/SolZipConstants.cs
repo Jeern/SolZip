@@ -7,17 +7,17 @@ namespace SolutionZipper
 {
     public static class SolZipConstants
     {
-        public const string SolutionExtension = ".sln";
-        public const string CsharpProjectExtension = ".csproj";
-        public const string SetupProjectExtension = ".vdproj";
-        public const string SolutionSuffix = "Solution";
-        public const string ProjectSuffix = "Project";
-        public const string ItemSuffix = "Item";
-        public const string HelpArgument = "/?";
-        public const string ZipFileArgument = "/zipfile";
-        public const string SolutionArgument = "/solution";
-        public const string ProjectArgument = "/project";
-        public const string FileArgument = "/file";
         public const string ExcludeReadmeArgument = "/excludereadme";
+        public const string FileArgument = "/file";
+        public const string HelpArgument = "/?";
+        public const string ItemSuffix = "Item";
+        public const string ProjectArgument = "/project";
+        public const string ProjectExtension = ".csproj";
+        public const string ProjectSuffix = "Project";
+        public const string SetupProjectExtension = ".vdproj";
+        public const string SolutionArgument = "/solution";
+        public const string SolutionExtension = ".sln";
+        public const string SolutionSuffix = "Solution";
+        public const string ZipFileArgument = "/zipfile";
     }
 }
