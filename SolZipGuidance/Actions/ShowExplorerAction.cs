@@ -19,10 +19,6 @@ namespace SolZipGuidance.Actions
         /// </summary>
         public override void Execute()
         {
-            //if (File.Exists(Folder)) //It is really a file
-            //{
-            //    Folder = Path.GetDirectoryName(Folder);
-            //}
             if (!Directory.Exists(Folder) && !File.Exists(Folder))
                 throw new ArgumentException("You must provide a real file or folder name for ShowExplorerAction", "Folder");
 

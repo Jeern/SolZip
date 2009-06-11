@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace SolutionZipper
 {
@@ -113,7 +114,10 @@ namespace SolutionZipper
                 CopyFileNameToClipboard(zipFileName);
             }
             Zip(zipFileName, fileToZip, excludeReadme);
- 
+            if (showFile)
+            {
+                Process.Start(zipFileName);
+            } 
         }
 
         private static void CopyFileNameToClipboard(string zipFileName)
