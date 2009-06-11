@@ -35,9 +35,11 @@ namespace SolZipMME
 
         private void ZipItButton_Click(object sender, EventArgs e)
         {
+            Cursor cursor = Cursor.Current;
             try
             {
-                SolZipHelper.Zip(ZipFileTextBox.Text, FileToZipTextBox.Text, 
+                Cursor.Current = Cursors.WaitCursor;
+                SolZipHelper.Zip(ZipFileTextBox.Text, FileToZipTextBox.Text,
                     ShowCheckBox.Checked, ClipboardCheckBox.Checked, ExcludeCheckBox.Checked);
                 Close();
             }
@@ -48,6 +50,10 @@ namespace SolZipMME
 #else
                 MessageBox.Show("Solution Zipper", "There was a problem: " + ex.Message);
 #endif
+            }
+            finally
+            {
+                Cursor.Current = cursor;
             }
         }
 
