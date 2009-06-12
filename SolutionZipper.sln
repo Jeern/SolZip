@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8F52CA03-010
 		Lib\Microsoft.Practices.RecipeFramework.Extensions.dll = Lib\Microsoft.Practices.RecipeFramework.Extensions.dll
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionZipperConsoleTest", "SolutionZipperConsoleTest\SolutionZipperConsoleTest.csproj", "{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunZip", "SunZip\SunZip.csproj", "{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipGuidanceGAT", "SolZipGuidanceGAT\SolZipGuidanceGAT.csproj", "{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}"
@@ -50,7 +48,18 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SolZipMMESetup", "SolZipMME
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipMMEInstaller", "SolZipMMEInstaller\SolZipMMEInstaller.csproj", "{2ABEE8C2-411C-4F5B-A622-B3A29940FA5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionZipperTest", "SolutionZipperTest\SolutionZipperTest.csproj", "{A67C0CB6-975A-4140-BAA5-045ACFDC0FB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F36ED2E9-DD4B-488F-B4FF-F07603AAC047}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		SolutionZipper.vsmdi = SolutionZipper.vsmdi
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SolutionZipper.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -60,10 +69,6 @@ Global
 		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591}.Release|Any CPU.Build.0 = Release|Any CPU
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -101,13 +106,17 @@ Global
 		{2ABEE8C2-411C-4F5B-A622-B3A29940FA5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ABEE8C2-411C-4F5B-A622-B3A29940FA5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ABEE8C2-411C-4F5B-A622-B3A29940FA5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A67C0CB6-975A-4140-BAA5-045ACFDC0FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67C0CB6-975A-4140-BAA5-045ACFDC0FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67C0CB6-975A-4140-BAA5-045ACFDC0FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FAECC790-26DC-4948-AF3A-D2EB9D750B16} = {DC485C6B-78E2-4120-9743-0D111C4EF66F}
-		{CC9CA315-EF85-4A3A-AE56-9B3CC96FF591} = {DAB728E8-33C0-428A-B62F-E75BC625EEEC}
+		{A67C0CB6-975A-4140-BAA5-045ACFDC0FB6} = {DAB728E8-33C0-428A-B62F-E75BC625EEEC}
+		{F36ED2E9-DD4B-488F-B4FF-F07603AAC047} = {DAB728E8-33C0-428A-B62F-E75BC625EEEC}
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F} = {BBF2B885-67FD-47B0-BA89-A1722282A8A7}
 		{2AB94C50-DF43-43F7-AFFD-B1D4CB414A47} = {BBF2B885-67FD-47B0-BA89-A1722282A8A7}
 		{1464424A-F821-4342-8DE3-B59EA35334C5} = {BBF2B885-67FD-47B0-BA89-A1722282A8A7}
