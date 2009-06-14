@@ -216,7 +216,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SolutionZipper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SolutionZipper, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_4093E049C028619047502B00368A56AA"
@@ -278,7 +278,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.2.1, Culture=neutral, PublicKeyToken=f383dc8b57937be2, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.4.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_BC38A3846477C36C8ACAB48B0333A580"
@@ -361,14 +361,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SolZipMME"
-        "ProductCode" = "8:{48A9BD71-2756-45B2-AD1A-CDA4F13848B6}"
-        "PackageCode" = "8:{343B17BA-1220-4ED6-AAFB-A7DCEA092737}"
+        "ProductCode" = "8:{4E8606D9-FA70-44C1-97E3-9787C4AA6A4F}"
+        "PackageCode" = "8:{ED6954F1-4119-4687-BC70-C76F4CC62BD0}"
         "UpgradeCode" = "8:{36AD8D81-8871-4470-99D0-B1F9976323F0}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:JERN"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

@@ -235,7 +235,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SolutionZipper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SolutionZipper, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_2CB4949994F7AE6CEEA242D7279A183D"
@@ -318,14 +318,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SunZip"
-        "ProductCode" = "8:{9CB0C54E-C896-4BEC-A8B8-6260BA0F5AF2}"
-        "PackageCode" = "8:{F200012D-D1D5-4E36-8CEB-32E3E8DD5A7F}"
+        "ProductCode" = "8:{09B08C4E-837B-495A-A040-7EC3D7E4A8EB}"
+        "PackageCode" = "8:{FBAA33CB-13E5-4609-9733-A1330E65646F}"
         "UpgradeCode" = "8:{EAF3C218-134E-4559-B8B2-9EF174EC30ED}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:JERN"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
