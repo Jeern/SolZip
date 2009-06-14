@@ -216,7 +216,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SolutionZipper, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SolutionZipper, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_4093E049C028619047502B00368A56AA"
@@ -348,9 +348,24 @@
         }
         "LaunchCondition"
         {
+            "{836E08B8-0285-4809-BA42-01DB6754A45D}:_AE5EF6A2875749A58A71A3C4B2411450"
+            {
+            "Name" = "8:MME"
+            "Condition" = "8:MMEINSTALLED"
+            "Message" = "8:You have not installed ManagedMenuExtensions Beta2 patch1. You have to install ManagedMenuExtensionsSetup.msi followed by ManagedMenuVS2008Setup.msi. Click Yes to be directed to Download site. No to Exit."
+            "InstallUrl" = "8:http://managedmenuextension.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=28744"
+            }
         }
         "Locator"
         {
+            "{CF66B7F7-B7DA-4B08-A67A-233430638C9C}:_752A9AFC5DC3498BBF7315B60BA4C7A9"
+            {
+            "Name" = "8:MMEINSTALLED"
+            "Root" = "2:1"
+            "RegKey" = "8:Software\\Jern\\ManagedMenuExtensions"
+            "Value" = "8:AddInMainDirectory"
+            "Property" = "8:MMEINSTALLED"
+            }
         }
         "MsiBootstrapper"
         {
@@ -361,14 +376,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SolZipMME"
-        "ProductCode" = "8:{4E8606D9-FA70-44C1-97E3-9787C4AA6A4F}"
-        "PackageCode" = "8:{ED6954F1-4119-4687-BC70-C76F4CC62BD0}"
+        "ProductCode" = "8:{862501A9-81A7-4EB1-BE7F-A0A52B6F2CC9}"
+        "PackageCode" = "8:{CB222218-FD24-48B7-B3EC-FA5EDF1D6D07}"
         "UpgradeCode" = "8:{36AD8D81-8871-4470-99D0-B1F9976323F0}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.2"
+        "ProductVersion" = "8:1.0.3"
         "Manufacturer" = "8:JERN"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
