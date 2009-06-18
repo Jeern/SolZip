@@ -170,6 +170,111 @@ namespace SolutionZipper
 
         public byte[] ReadFile(string fileName)
         {
+            if (Path.GetExtension(fileName) == SolZipConstants.SolutionExtension)
+                return ReadSolutionFile(fileName, true);
+
+            if (Path.GetExtension(fileName) == SolZipConstants.ProjectExtension)
+                return ReadProjectFile(fileName, true);
+
+            return ReadFileWorker(fileName);
+        }
+
+        private byte[] ReadSolutionFile(string fileName, bool removeSourceControl)
+        {
+            if (!removeSourceControl)
+                return ReadFileWorker(fileName);
+
+            using (var file = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = new StreamReader(file, true))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (string line in GetSolutionLines(reader))
+                    {
+                        sb.AppendLine(line);
+                    }
+                    return String2Bytes(sb.ToString());
+                }
+            }
+        }
+
+        private IEnumerable<string> GetSolutionLines(StreamReader reader)
+        {
+            bool inSccSection = false;
+            const string sccSectionStart = "GlobalSection(SourceCodeControl)";
+            const string sccSectionEnd = "EndGlobalSection";
+            var otherSccLines = new string[] 
+                { 
+                    "SccProjectName", 
+                    "SccAuxPath", 
+                    "SccLocalPath", 
+                    "SccProvider" 
+                };
+
+            while(!reader.EndOfStream)
+            {
+                string solutionLine = reader.ReadLine();
+                string trimmedReadLine = TrimmedSolutionLine(solutionLine);
+
+                if(Startswith(trimmedReadLine, otherSccLines))
+                    yield break;
+
+                if(trimmedReadLine.StartsWith(sccSectionStart))
+                {
+                    inSccSection = true;
+                    yield break;
+                }
+
+                if(trimmedReadLine.StartsWith(sccSectionEnd) && inSccSection)
+                {
+                    inSccSection = false;
+                    yield break;
+                }
+
+                if(inSccSection)
+                    yield break;
+
+                yield return solutionLine;
+            }
+        }
+
+        private string TrimmedSolutionLine(string line)
+        {
+            return line.TrimStart(' ', '\t');
+        }
+
+        private bool Startswith(string line, string[] startArray)
+        {
+            foreach (string start in startArray)
+            {
+                if (line.StartsWith(start))
+                    return true;
+            }
+            return false;
+        }
+
+        private byte[] ReadProjectFile(string fileName, bool removeSourceControl)
+        {
+            if (!removeSourceControl)
+                return ReadFileWorker(fileName);
+            
+            XElement doc = XElement.Load(fileName);
+            XNamespace ns = "http://schemas.microsoft.com/developer/msbuild/2003";
+            (from element in doc.Descendants(ns + "PropertyGroup").Elements()
+             where element.Name.LocalName.StartsWith("Scc")
+             select element).Remove();
+            
+            return String2Bytes(doc.ToString());
+        }
+
+        private byte[] String2Bytes(string doc)
+        {
+            UTF8Encoding encoding = new UTF8Encoding(true);
+            return encoding.GetBytes(doc);
+        }
+
+        private byte[] ReadFileWorker(string fileName)
+        {
             using (var file = new FileStream(fileName, FileMode.Open, FileAccess.Read))
             {
                 byte[] bar = new byte[file.Length];
