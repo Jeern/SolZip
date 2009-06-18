@@ -57,7 +57,7 @@ namespace SolZipGuidance.References
 
         public override string AppliesTo
         {
-            get { return "Solutions, C# Projects, Setup projects and Items"; }
+            get { return "Solutions, C# Projects, and Items"; }
         }
     }
 }
