@@ -186,7 +186,7 @@ namespace SolutionZipper
 
             using (var file = new FileStream(fileName, FileMode.Open, FileAccess.Read))
             {
-                using (var reader = new StreamReader(file, true))
+                using (var reader = new StreamReader(file))
                 {
                     StringBuilder sb = new StringBuilder();
                     foreach (string line in GetSolutionLines(reader))
@@ -201,40 +201,34 @@ namespace SolutionZipper
         private IEnumerable<string> GetSolutionLines(StreamReader reader)
         {
             bool inSccSection = false;
-            const string sccSectionStart = "GlobalSection(SourceCodeControl)";
+            var sccSectionStart = new string[] 
+            {
+                "GlobalSection(SourceCodeControl)",
+                "GlobalSection(TeamFoundationVersionControl)"
+            };
             const string sccSectionEnd = "EndGlobalSection";
-            var otherSccLines = new string[] 
-                { 
-                    "SccProjectName", 
-                    "SccAuxPath", 
-                    "SccLocalPath", 
-                    "SccProvider" 
-                };
 
             while(!reader.EndOfStream)
             {
                 string solutionLine = reader.ReadLine();
                 string trimmedReadLine = TrimmedSolutionLine(solutionLine);
 
-                if(Startswith(trimmedReadLine, otherSccLines))
-                    yield break;
-
-                if(trimmedReadLine.StartsWith(sccSectionStart))
+                if (Startswith(trimmedReadLine, sccSectionStart))
                 {
                     inSccSection = true;
-                    yield break;
                 }
-
-                if(trimmedReadLine.StartsWith(sccSectionEnd) && inSccSection)
+                else if (trimmedReadLine.StartsWith(sccSectionEnd) && inSccSection)
                 {
                     inSccSection = false;
-                    yield break;
                 }
-
-                if(inSccSection)
-                    yield break;
-
-                yield return solutionLine;
+                else if (inSccSection)
+                {
+                    //This just means that nothing is returned because we are in the section.
+                }
+                else
+                {
+                    yield return solutionLine;
+                }
             }
         }
 
@@ -269,8 +263,8 @@ namespace SolutionZipper
 
         private byte[] String2Bytes(string doc)
         {
-            UTF8Encoding encoding = new UTF8Encoding(true);
-            return encoding.GetBytes(doc);
+            var encoding = new UTF8Encoding();
+            return UTF8Encoding.Convert(Encoding.ASCII, Encoding.UTF8,  encoding.GetBytes(doc));
         }
 
         private byte[] ReadFileWorker(string fileName)
