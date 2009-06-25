@@ -251,7 +251,7 @@ namespace SolutionZipper
         {
             if (!removeSourceControl)
                 return ReadFileWorker(fileName);
-            
+
             XElement doc = XElement.Load(fileName);
             XNamespace ns = "http://schemas.microsoft.com/developer/msbuild/2003";
             (from element in doc.Descendants(ns + "PropertyGroup").Elements()
@@ -263,8 +263,13 @@ namespace SolutionZipper
 
         private byte[] String2Bytes(string doc)
         {
-            var encoding = new UTF8Encoding();
-            return UTF8Encoding.Convert(Encoding.ASCII, Encoding.UTF8,  encoding.GetBytes(doc));
+            var encoding = new ASCIIEncoding();
+            byte[] content = encoding.GetBytes(doc);
+            byte[] utf8Preamble = Encoding.UTF8.GetPreamble();
+            byte[] newContent = new byte[content.Length + utf8Preamble.Length];
+            Buffer.BlockCopy(utf8Preamble, 0, newContent, 0, utf8Preamble.Length);
+            Buffer.BlockCopy(content, 0, newContent, utf8Preamble.Length, content.Length);
+            return newContent; 
         }
 
         private byte[] ReadFileWorker(string fileName)
