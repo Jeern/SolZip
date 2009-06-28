@@ -8,7 +8,7 @@ using System.IO;
 using System.Xml.Linq;
 using System.Reflection;
 
-namespace SolutionZipper
+namespace SolZipBasis
 {
     public class SolZipController : IDisposable
     {
@@ -294,7 +294,7 @@ namespace SolutionZipper
         }
 
         /// <summary>
-        /// This funny little thing adds a readme file called SZReadme.txt, which is an advertisement for SolutionZipper. 
+        /// This funny little thing adds a readme file called SZReadme.txt, which is an advertisement for SolZip. 
         /// It is optional of course. I do not want to force anyone to have an extra readme file. For now it is on here as an experiment.
         /// </summary>
         /// <returns></returns>
@@ -304,7 +304,7 @@ namespace SolutionZipper
                 return;
             m_SZReadmeAlreadyAdded = true;
             
-            Stream readmeFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("SolutionZipper.readme.txt");
+            Stream readmeFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("SolZipBasis.readme.txt");
             byte[] fileArray = new byte[readmeFile.Length];
             readmeFile.Read(fileArray, 0, (int)readmeFile.Length);
             //ZipEntry entry = m_ZipEntryFactory.MakeFileEntry(ZipEntry.CleanName(ZipEntryFileName(GetReadMeName(topPath, 0))));

@@ -6,7 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace SolutionZipper
+namespace SolZipBasis
 {
     public static class SolZipHelper
     {

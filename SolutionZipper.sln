@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionZipper", "SolutionZipper\SolutionZipper.csproj", "{FAECC790-26DC-4948-AF3A-D2EB9D750B16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipBasis", "SolutionZipper\SolZipBasis.csproj", "{FAECC790-26DC-4948-AF3A-D2EB9D750B16}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8F52CA03-0103-432D-89C4-1354D819BD62}"
 	ProjectSection(SolutionItems) = preProject

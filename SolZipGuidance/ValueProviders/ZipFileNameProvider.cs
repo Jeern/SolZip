@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SolutionZipper;
+using SolZipBasis;
 using Microsoft.Practices.RecipeFramework;
 using Microsoft.Practices.Common;
 using System.Collections.Specialized;

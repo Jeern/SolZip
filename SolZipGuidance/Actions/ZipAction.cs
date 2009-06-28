@@ -8,7 +8,7 @@ using System.IO;
 using Microsoft.Practices.RecipeFramework.Library;
 using EnvDTE80;
 //using System.Windows.Forms;
-using SolutionZipper;
+using SolZipBasis;
 
 namespace SolZipGuidance.Actions
 {
