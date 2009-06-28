@@ -15,26 +15,26 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_4EA8B62CDFC46223156CD8B70AAF83C4"
+        "MsmKey" = "8:_3FF40977C571CFD644AB6C8FAAC4EF4A"
         "OwnerKey" = "8:_91DE914682174AADAFA332CF84835A59"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_808AAFDA1D80DE28EE3DCAA67381149C"
-        "OwnerKey" = "8:_91DE914682174AADAFA332CF84835A59"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_808AAFDA1D80DE28EE3DCAA67381149C"
-        "OwnerKey" = "8:_4EA8B62CDFC46223156CD8B70AAF83C4"
+        "MsmKey" = "8:_3FF40977C571CFD644AB6C8FAAC4EF4A"
+        "OwnerKey" = "8:_D860AFE875610D8CF9774D32EE938900"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_91DE914682174AADAFA332CF84835A59"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D860AFE875610D8CF9774D32EE938900"
+        "OwnerKey" = "8:_91DE914682174AADAFA332CF84835A59"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,19 +52,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D860AFE875610D8CF9774D32EE938900"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3FF40977C571CFD644AB6C8FAAC4EF4A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E20206E7790D4246AF387DA4EC44570E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4EA8B62CDFC46223156CD8B70AAF83C4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_808AAFDA1D80DE28EE3DCAA67381149C"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -200,20 +200,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4EA8B62CDFC46223156CD8B70AAF83C4"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3FF40977C571CFD644AB6C8FAAC4EF4A"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SolutionZipper, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4EA8B62CDFC46223156CD8B70AAF83C4"
+                    "_3FF40977C571CFD644AB6C8FAAC4EF4A"
                     {
-                    "Name" = "8:SolutionZipper.dll"
+                    "Name" = "8:ICSharpCode.SharpZipLib.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:SolutionZipper.dll"
+            "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C8E1522149EB4D708190C39A8DB34446"
@@ -231,20 +231,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_808AAFDA1D80DE28EE3DCAA67381149C"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D860AFE875610D8CF9774D32EE938900"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SolZipBasis, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_808AAFDA1D80DE28EE3DCAA67381149C"
+                    "_D860AFE875610D8CF9774D32EE938900"
                     {
-                    "Name" = "8:ICSharpCode.SharpZipLib.dll"
+                    "Name" = "8:SolZipBasis.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
+            "SourcePath" = "8:SolZipBasis.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C8E1522149EB4D708190C39A8DB34446"
@@ -318,14 +318,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SolZip"
-        "ProductCode" = "8:{4A2EDFCF-2E15-4394-B248-93CD12AF2923}"
-        "PackageCode" = "8:{FC9E986E-C3AD-4EB0-AD56-EB6F8258FD3F}"
+        "ProductCode" = "8:{C0F323BE-ADE5-435C-AB18-3A747A084C91}"
+        "PackageCode" = "8:{8B518873-8539-4558-8B12-38BB25E3599A}"
         "UpgradeCode" = "8:{EAF3C218-134E-4559-B8B2-9EF174EC30ED}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:JERN"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -839,7 +839,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_91DE914682174AADAFA332CF84835A59"
             {
-            "SourcePath" = "8:..\\SunZip\\obj\\Debug\\SolZip.exe"
+            "SourcePath" = "8:..\\SolZip\\obj\\Release\\SolZip.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C8E1522149EB4D708190C39A8DB34446"
@@ -867,7 +867,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E20206E7790D4246AF387DA4EC44570E"
             {
-            "SourcePath" = "8:..\\SunZipInstaller\\obj\\Debug\\SolZipInstaller.dll"
+            "SourcePath" = "8:..\\SolZipInstaller\\obj\\Release\\SolZipInstaller.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C8E1522149EB4D708190C39A8DB34446"
