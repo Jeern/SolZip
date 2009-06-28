@@ -63,7 +63,7 @@ namespace SolZipTest
         {
             var currentDir = new DirectoryInfo(Directory.GetCurrentDirectory());
             DirectoryInfo solutionDir = currentDir.Parent.Parent.Parent;
-            return Path.Combine(solutionDir.FullName, "SolutionZipper.sln");
+            return Path.Combine(solutionDir.FullName, "SolZip.sln");
         }
 
         private static string GetZipFileName()
