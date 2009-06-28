@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipBasis", "SolZipBasis\SolZipBasis.csproj", "{FAECC790-26DC-4948-AF3A-D2EB9D750B16}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8F52CA03-0103-432D-89C4-1354D819BD62}"
 	ProjectSection(SolutionItems) = preProject
 		Lib\deployMSI.bat = Lib\deployMSI.bat
@@ -65,19 +63,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		SolZip.vsmdi = SolZip.vsmdi
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipBasis", "SolZipBasis\SolZipBasis.csproj", "{FAECC790-26DC-4948-AF3A-D2EB9D750B16}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = SolZip.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Release|Any CPU.Build.0 = Release|Any CPU
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -118,6 +111,10 @@ Global
 		{A67C0CB6-975A-4140-BAA5-045ACFDC0FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A67C0CB6-975A-4140-BAA5-045ACFDC0FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A67C0CB6-975A-4140-BAA5-045ACFDC0FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAECC790-26DC-4948-AF3A-D2EB9D750B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
