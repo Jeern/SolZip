@@ -22,12 +22,14 @@ namespace SolZipGuidance.Actions
 
         [Input(Required = true)]
         public bool ExcludeReadme { get; set; }
-        
 
+        [Input(Required = true)]
+        public bool RemoveSourceControl { get; set; }
+        
         // Methods
         public override void Execute()
         {
-            SolZipHelper.Zip(ZipFileName, FileToZip, ExcludeReadme);
+            SolZipHelper.Zip(ZipFileName, FileToZip, ExcludeReadme, RemoveSourceControl);
         }
 
         public override void Undo()

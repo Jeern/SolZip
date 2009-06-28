@@ -57,33 +57,33 @@ namespace SolutionZipper
             return SolZipHelper.SuggestFileName(fileToZip);
         }
 
-        public static void ZipItem(string zipFileName, string fileToZip, bool excludeSZReadme)
+        public static void ZipItem(string zipFileName, string fileToZip, bool excludeSZReadme, bool removeSourceControl)
         {
-            using (var controller = new SolZipController(zipFileName, excludeSZReadme))
+            using (var controller = new SolZipController(zipFileName, excludeSZReadme, removeSourceControl))
             {
                 controller.ZipFile(fileToZip);
             }
         }
 
-        public static void ZipProject(string zipFileName, string fileToZip, bool excludeSZReadme)
+        public static void ZipProject(string zipFileName, string fileToZip, bool excludeSZReadme, bool removeSourceControl)
         {
-            using (var controller = new SolZipController(zipFileName, excludeSZReadme))
+            using (var controller = new SolZipController(zipFileName, excludeSZReadme, removeSourceControl))
             {
                 controller.ZipProject(fileToZip);
             }
         }
 
-        public static void ZipSolution(string zipFileName, string fileToZip, bool excludeSZReadme)
+        public static void ZipSolution(string zipFileName, string fileToZip, bool excludeSZReadme, bool removeSourceControl)
         {
-            using (var controller = new SolZipController(zipFileName, excludeSZReadme))
+            using (var controller = new SolZipController(zipFileName, excludeSZReadme, removeSourceControl))
             {
                 controller.ZipSolution(fileToZip);
             }
         }
 
-        public static void Zip(string zipFileName, string fileToZip, bool excludeSZReadme)
+        public static void Zip(string zipFileName, string fileToZip, bool excludeSZReadme, bool removeSourceControl)
         {
-            using (var controller = new SolZipController(zipFileName, excludeSZReadme))
+            using (var controller = new SolZipController(zipFileName, excludeSZReadme, removeSourceControl))
             {
                 switch (GetZipFileSuffix(fileToZip))
                 {
@@ -102,18 +102,19 @@ namespace SolutionZipper
             }
         }
 
-        public static void Zip(string fileToZip, bool excludeSZReadme)
+        public static void Zip(string fileToZip, bool excludeSZReadme, bool removeSourceControl)
         {
-            Zip(GetZipFileName(fileToZip), fileToZip, excludeSZReadme);
+            Zip(GetZipFileName(fileToZip), fileToZip, excludeSZReadme, removeSourceControl);
         }
 
-        public static void Zip(string zipFileName, string fileToZip, bool showFile, bool copyToClipboard, bool excludeReadme)
+        public static void Zip(string zipFileName, string fileToZip, bool showFile, 
+            bool copyToClipboard, bool excludeReadme, bool removeSourceControl)
         {
             if (copyToClipboard)
             {
                 CopyFileNameToClipboard(zipFileName);
             }
-            Zip(zipFileName, fileToZip, excludeReadme);
+            Zip(zipFileName, fileToZip, excludeReadme, removeSourceControl);
             if (showFile)
             {
                 Process.Start(zipFileName);

@@ -20,6 +20,9 @@
     <Argument Name="ExcludeReadme" Type="System.Boolean">
       <ValueProvider Type="Evaluator" Expression="False" />
     </Argument>
+    <Argument Name="RemoveSourceControl" Type="System.Boolean">
+      <ValueProvider Type="Evaluator" Expression="True" />
+    </Argument>
     <Argument Name="FileToZip">
       <ValueProvider Type="SolZipGuidance.ValueProviders.FileNameOfSelectedItemProvider, SolZipGuidance" />
     </Argument>
@@ -38,7 +41,8 @@
             <Field Label="Name of Zipfile" ValueName="ZipFileName" />
             <Field Label="Show resulting file" ValueName="ShowExplorer" />
             <Field Label="Copy path to Clipboard" ValueName="CopyToClipboard" />
-            <Field Label="Exclude SolZipReadme.txt" ValueName="ExcludeReadme" />            
+            <Field Label="Exclude SolZipReadme.txt" ValueName="ExcludeReadme" />
+            <Field Label="Do not include source control bindings" ValueName="RemoveSourceControl" />
           </Fields>
         </Page>
       </Pages>
@@ -49,6 +53,7 @@
       <Input Name="ZipFileName" RecipeArgument="ZipFileName" />
       <Input Name="FileToZip" RecipeArgument="FileToZip" />
       <Input Name="ExcludeReadme" RecipeArgument="ExcludeReadme" />
+      <Input Name="RemoveSourceControl" RecipeArgument="RemoveSourceControl" />
     </Action>
     <Action Name="ShowExplorer" Type="SolZipGuidance.Actions.ShowExplorerAction, SolZipGuidance" Condition="$(ShowExplorer)" >
       <Input Name="Folder" RecipeArgument="ZipFileName" />

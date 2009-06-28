@@ -39,8 +39,10 @@ namespace SolZipMME
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-                SolZipHelper.Zip(ZipFileTextBox.Text, FileToZipTextBox.Text,
-                    ShowCheckBox.Checked, ClipboardCheckBox.Checked, ExcludeCheckBox.Checked);
+                SolZipHelper.Zip(
+                    ZipFileTextBox.Text, FileToZipTextBox.Text,
+                    ShowCheckBox.Checked, ClipboardCheckBox.Checked, 
+                    ExcludeCheckBox.Checked, RemoveSourceControlCheckBox.Checked);
                 Close();
             }
             catch (Exception ex)
