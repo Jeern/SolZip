@@ -5,11 +5,10 @@ using System.Text;
 using SolZipBasis;
 using System.IO;
 
-namespace SunZip
+namespace SolZip
 {
     /// <summary>
-    /// SunZip is the conmmandline entrance to Zipping VS Solutions, CSharpProjects, SetupProjects and Items
-    /// Lovingly called SunZip because sol in danish means sun.
+    /// SolZip is the conmmandline entrance to Zipping VS Solutions, CSharpProjects, SetupProjects and Items
     /// </summary>
     class Program
     {
@@ -45,7 +44,7 @@ namespace SunZip
 
         private static void DisplayHelp()
         {
-            Console.WriteLine("SunZip usage:");
+            Console.WriteLine("SolZip usage:");
             Console.WriteLine("    {0} To Display help - same as no arguments", SolZipConstants.HelpArgument);
             Console.WriteLine("    {0} - this means that SolZipReadme.txt will not be added to Archive", SolZipConstants.ExcludeReadmeArgument);
             Console.WriteLine("    {0} - SourceControl bindings will not be removed in Zip file", SolZipConstants.KeepSourceControlArgument);
@@ -61,8 +60,8 @@ namespace SunZip
             Console.WriteLine("    If no filename is provided for Zipfile a name is generated.");
             Console.WriteLine();
             Console.WriteLine("    Examples:");
-            Console.WriteLine("      SunZip {0}:\"C:\\Eksempel.zip\" {1}:\"C:\\Eksempel\\Eksempel.sln\"", SolZipConstants.ZipFileArgument, SolZipConstants.SolutionArgument);
-            Console.WriteLine("      SunZip {0}:\"C:\\Eksempel\\Eksempel\\Eksempel.csproj\"", SolZipConstants.ProjectArgument);
+            Console.WriteLine("      SolZip {0}:\"C:\\Eksempel.zip\" {1}:\"C:\\Eksempel\\Eksempel.sln\"", SolZipConstants.ZipFileArgument, SolZipConstants.SolutionArgument);
+            Console.WriteLine("      SolZip {0}:\"C:\\Eksempel\\Eksempel\\Eksempel.csproj\"", SolZipConstants.ProjectArgument);
         }
 
         private static string GetZipFileName(Dictionary<string, string> args, string fileToZip)

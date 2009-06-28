@@ -8,8 +8,8 @@
     <ProjectGuid>{1464424A-F821-4342-8DE3-B59EA35334C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SunZipInstaller</RootNamespace>
-    <AssemblyName>SunZipInstaller</AssemblyName>
+    <RootNamespace>SolZipInstaller</RootNamespace>
+    <AssemblyName>SolZipInstaller</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

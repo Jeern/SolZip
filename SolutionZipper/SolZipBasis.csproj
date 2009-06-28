@@ -8,8 +8,8 @@
     <ProjectGuid>{FAECC790-26DC-4948-AF3A-D2EB9D750B16}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SolutionZipper</RootNamespace>
-    <AssemblyName>SolutionZipper</AssemblyName>
+    <RootNamespace>SolZipBasis</RootNamespace>
+    <AssemblyName>SolZipBasis</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

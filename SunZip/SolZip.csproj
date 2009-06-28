@@ -8,8 +8,8 @@
     <ProjectGuid>{96D469EA-57F6-4320-9DDC-5B58C0E0A34F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SunZip</RootNamespace>
-    <AssemblyName>SunZip</AssemblyName>
+    <RootNamespace>SolZip</RootNamespace>
+    <AssemblyName>SolZip</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
