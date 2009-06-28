@@ -8,10 +8,10 @@ using System.IO;
 using System.Windows.Forms;
 using System.Collections;
 
-namespace SunZip
+namespace SolZip
 {
     [RunInstaller(true)]
-    public class SunZipInstall : Installer
+    public class SolZipInstall : Installer
     {
         protected override void OnAfterInstall(System.Collections.IDictionary savedState)
         {
