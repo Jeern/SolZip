@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.Practices.RecipeFramework;
 using System.Runtime.Serialization;
 
-namespace SolutionZipperGuidance.References
+namespace SolZipGuidance.References
 {
     [Serializable]
     public class AnyElementReference : UnboundRecipeReference

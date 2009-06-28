@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Windows.Forms.Design;
 using System.Windows.Forms;
 
-namespace SolutionZipperGuidance.Editors
+namespace SolZipGuidance.Editors
 {
     public class MessageEditor : UITypeEditor
     {

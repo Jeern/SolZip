@@ -8,7 +8,7 @@ using System.Windows.Forms.Design;
 using System.Windows.Forms;
 #endregion
 
-namespace SolutionZipperGuidance.Editors
+namespace SolZipGuidance.Editors
 {
     /// <summary>
     /// Editor that will choose a file when it is used

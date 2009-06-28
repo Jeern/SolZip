@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace SolutionZipperGuidance.Converters
+namespace SolZipGuidance.Converters
 {
     /// <summary>
     /// Sample converter that returns a list of optional values to pick from, but 

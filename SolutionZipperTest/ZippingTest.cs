@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using SolZipBasis;
 
-namespace SolutionZipperTest
+namespace SolZipTest
 {
     /// <summary>
     /// Summary description for UnitTest1

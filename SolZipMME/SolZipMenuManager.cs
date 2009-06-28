@@ -27,7 +27,7 @@ namespace SolZipMME
             if (types != ApplicationTypes.VS2008)
                 return null;
 
-            return "SolutionZipper (MME)";
+            return "SolZip (MME)";
         }
 
         public override void MenuClicked(MenuItemView clickedMenu, MenuContextView menuContext)

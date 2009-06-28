@@ -5,7 +5,7 @@ using VSLangProj;
 using System.Runtime.Serialization;
 using Microsoft.Practices.RecipeFramework;
 
-namespace SolutionZipperGuidance.References
+namespace SolZipGuidance.References
 {
     /// <summary>
     /// UnBoundRecipe that allows to be executed only on Solution Folders

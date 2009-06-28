@@ -14,7 +14,7 @@ using EnvDTE;
 
 #endregion
 
-namespace SolutionZipperGuidance.Actions
+namespace SolZipGuidance.Actions
 {
     /// <summary>
     /// Adds a new template reference to the IAssetReferenceService

@@ -2,7 +2,7 @@
 using System.Text;
 using Microsoft.Practices.RecipeFramework;
 
-namespace SolutionZipperGuidance.ValueProviders
+namespace SolZipGuidance.ValueProviders
 {
     public class DateNowValueProvider : ValueProvider
     {

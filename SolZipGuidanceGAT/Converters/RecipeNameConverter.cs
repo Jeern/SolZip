@@ -5,7 +5,7 @@ using System.ComponentModel;
 using Microsoft.Practices.RecipeFramework.Services;
 using Microsoft.Practices.RecipeFramework.Configuration;
 
-namespace SolutionZipperGuidance.Converters
+namespace SolZipGuidance.Converters
 {
     public class RecipeNameConverter : StringConverter
     {

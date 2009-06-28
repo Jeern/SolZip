@@ -10,19 +10,19 @@
     SchemaVersion="1.0">
   <HostData>
     <RegistrationSettings>/Hive=9.0Exp /RANU</RegistrationSettings>
-    <Menu Name="SZGItem" Text="SolutionZipper" Priority="1">
+    <Menu Name="SZGItem" Text="SolZip" Priority="1">
       <CommandBar Name="Item"/>
     </Menu>
-    <Menu Name="SZGProject" Text="SolutionZipper" Priority="1">
+    <Menu Name="SZGProject" Text="SolZip" Priority="1">
       <CommandBar Name="Project"/>
     </Menu>
-    <Menu Name="SZGProjectFolder" Text="SolutionZipper" Priority="1">
+    <Menu Name="SZGProjectFolder" Text="SolZip" Priority="1">
       <CommandBar Name="Folder"/>
     </Menu>
-    <Menu Name="SZGSolution" Text="SolutionZipper" Priority="1">
+    <Menu Name="SZGSolution" Text="SolZip" Priority="1">
       <CommandBar Name="Solution"/>
     </Menu>
-    <Menu Name="SZGSolutionFolder" Text="SolutionZipper" Priority="1">
+    <Menu Name="SZGSolutionFolder" Text="SolZip" Priority="1">
       <CommandBar Name="Solution Folder"/>
     </Menu>
   </HostData>

@@ -12,7 +12,7 @@ using System.Globalization;
 using System.IO;
 #endregion
 
-namespace SolutionZipperGuidance.Editors
+namespace SolZipGuidance.Editors
 {
 
     public class TemplateChooser : FileChooser

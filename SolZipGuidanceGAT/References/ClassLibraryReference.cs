@@ -5,7 +5,7 @@ using Microsoft.Practices.RecipeFramework.VisualStudio.Templates;
 using EnvDTE;
 using VSLangProj;
 
-namespace SolutionZipperGuidance.References
+namespace SolZipGuidance.References
 {
     [Serializable]
     public class ClassLibraryReference : UnboundTemplateReference

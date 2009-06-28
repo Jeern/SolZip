@@ -3,7 +3,7 @@ using System.Windows.Forms.Design;
 using Microsoft.Practices.RecipeFramework;
 using EnvDTE;
 
-namespace SolutionZipperGuidance.Actions
+namespace SolZipGuidance.Actions
 {
     public class ShowCurrentSelection : Action
     {
