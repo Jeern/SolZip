@@ -8,6 +8,7 @@ namespace SolutionZipper
     public static class SolZipConstants
     {
         public const string ExcludeReadmeArgument = "/excludereadme";
+        public const string KeepSourceControlArgument = "/keepsccbindings";
         public const string FileArgument = "/file";
         public const string HelpArgument = "/?";
         public const string ItemSuffix = "Item";

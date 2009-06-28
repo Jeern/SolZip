@@ -48,7 +48,7 @@ namespace SolutionZipperTest
 
             m_ZipFileName = GetZipFileName();
 
-            SolZipHelper.ZipSolution(m_ZipFileName, m_SolutionFileName, true); 
+            SolZipHelper.ZipSolution(m_ZipFileName, m_SolutionFileName, true, true); 
             
         }
 

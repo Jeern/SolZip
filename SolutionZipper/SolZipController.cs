@@ -17,6 +17,7 @@ namespace SolutionZipper
         private ZipEntryFactory m_ZipEntryFactory;
         private string m_TopPath; //The Path below which we will Zip (and nowhere else)
         private bool m_ExcludeSZReadme;
+        private bool m_RemoveSourceControl;
         private bool m_SZReadmeAlreadyAdded;
         private bool m_SolutionOrProject = false; //True if this Zip is a solution or project
 
@@ -44,9 +45,10 @@ namespace SolutionZipper
             return fileName;
         }
 
-        public SolZipController(string zipFileName, bool excludeSZReadme)
+        public SolZipController(string zipFileName, bool excludeSZReadme, bool removeSourceControl)
         {
             m_ExcludeSZReadme = excludeSZReadme;
+            m_RemoveSourceControl = removeSourceControl;
             m_TopPath = string.Empty;
             m_FileStream = new FileStream(zipFileName, FileMode.CreateNew, FileAccess.Write);
             m_ZipStream = new ZipOutputStream(m_FileStream);
@@ -168,20 +170,20 @@ namespace SolutionZipper
             }
         }
 
-        public byte[] ReadFile(string fileName)
+        private byte[] ReadFile(string fileName)
         {
             if (Path.GetExtension(fileName) == SolZipConstants.SolutionExtension)
-                return ReadSolutionFile(fileName, true);
+                return ReadSolutionFile(fileName);
 
             if (Path.GetExtension(fileName) == SolZipConstants.ProjectExtension)
-                return ReadProjectFile(fileName, true);
+                return ReadProjectFile(fileName);
 
             return ReadFileWorker(fileName);
         }
 
-        private byte[] ReadSolutionFile(string fileName, bool removeSourceControl)
+        private byte[] ReadSolutionFile(string fileName)
         {
-            if (!removeSourceControl)
+            if (!m_RemoveSourceControl)
                 return ReadFileWorker(fileName);
 
             using (var file = new FileStream(fileName, FileMode.Open, FileAccess.Read))
@@ -247,9 +249,9 @@ namespace SolutionZipper
             return false;
         }
 
-        private byte[] ReadProjectFile(string fileName, bool removeSourceControl)
+        private byte[] ReadProjectFile(string fileName)
         {
-            if (!removeSourceControl)
+            if (!m_RemoveSourceControl)
                 return ReadFileWorker(fileName);
 
             XElement doc = XElement.Load(fileName);
@@ -263,7 +265,8 @@ namespace SolutionZipper
 
         private byte[] String2Bytes(string doc)
         {
-            var encoding = new ASCIIEncoding();
+//            var encoding = new ASCIIEncoding();
+            var encoding = new UTF8Encoding();
             byte[] content = encoding.GetBytes(doc);
             byte[] utf8Preamble = Encoding.UTF8.GetPreamble();
             byte[] newContent = new byte[content.Length + utf8Preamble.Length];
