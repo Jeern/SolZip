@@ -5,7 +5,7 @@ using Microsoft.Practices.RecipeFramework.VisualStudio.Templates;
 using EnvDTE80;
 using EnvDTE;
 
-namespace SolutionZipperGuidance.References
+namespace SolZipGuidance.References
 {
     [Serializable]
     public class SolutionFolderAReference : UnboundTemplateReference

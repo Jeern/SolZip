@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
 
-[assembly: AssemblyTitle("SolutionZipperTest")]
+[assembly: AssemblyTitle("SolZipTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]

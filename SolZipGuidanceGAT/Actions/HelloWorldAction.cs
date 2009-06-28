@@ -2,7 +2,7 @@
 using System.Windows.Forms.Design;
 using Microsoft.Practices.RecipeFramework;
 
-namespace SolutionZipperGuidance.Actions
+namespace SolZipGuidance.Actions
 {
     public class HelloWorldAction : Action
     {
