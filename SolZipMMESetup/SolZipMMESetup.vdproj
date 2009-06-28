@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_4093E049C028619047502B00368A56AA"
-        "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -33,19 +27,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_94E51F9BA7A9663DD113B3589D456129"
+        "MsmKey" = "8:_A16AA24003974015B05ABC89F2DF124E"
         "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_94E51F9BA7A9663DD113B3589D456129"
-        "OwnerKey" = "8:_4093E049C028619047502B00368A56AA"
+        "MsmKey" = "8:_D27382C0492F274AA383CBCA3E6FD05C"
+        "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_BC38A3846477C36C8ACAB48B0333A580"
+        "MsmKey" = "8:_D27382C0492F274AA383CBCA3E6FD05C"
+        "OwnerKey" = "8:_A16AA24003974015B05ABC89F2DF124E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F913239E9A95B7F3695E664DA0B1047C"
         "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -53,6 +53,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A16AA24003974015B05ABC89F2DF124E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D27382C0492F274AA383CBCA3E6FD05C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,19 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4093E049C028619047502B00368A56AA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_94E51F9BA7A9663DD113B3589D456129"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BC38A3846477C36C8ACAB48B0333A580"
+        "OwnerKey" = "8:_F913239E9A95B7F3695E664DA0B1047C"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -212,20 +212,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4093E049C028619047502B00368A56AA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A16AA24003974015B05ABC89F2DF124E"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SolutionZipper, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SolZipBasis, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4093E049C028619047502B00368A56AA"
+                    "_A16AA24003974015B05ABC89F2DF124E"
                     {
-                    "Name" = "8:SolutionZipper.dll"
+                    "Name" = "8:SolZipBasis.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:SolutionZipper.dll"
+            "SourcePath" = "8:SolZipBasis.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
@@ -243,14 +243,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_94E51F9BA7A9663DD113B3589D456129"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D27382C0492F274AA383CBCA3E6FD05C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_94E51F9BA7A9663DD113B3589D456129"
+                    "_D27382C0492F274AA383CBCA3E6FD05C"
                     {
                     "Name" = "8:ICSharpCode.SharpZipLib.dll"
                     "Attributes" = "3:512"
@@ -274,14 +274,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BC38A3846477C36C8ACAB48B0333A580"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F913239E9A95B7F3695E664DA0B1047C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.4.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_BC38A3846477C36C8ACAB48B0333A580"
+                    "_F913239E9A95B7F3695E664DA0B1047C"
                     {
                     "Name" = "8:ManagedMenuAddInViews.dll"
                     "Attributes" = "3:512"
@@ -376,14 +376,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SolZipMME"
-        "ProductCode" = "8:{862501A9-81A7-4EB1-BE7F-A0A52B6F2CC9}"
-        "PackageCode" = "8:{CB222218-FD24-48B7-B3EC-FA5EDF1D6D07}"
+        "ProductCode" = "8:{06E62CB2-E28B-43B9-AA5B-E81BB180A7DA}"
+        "PackageCode" = "8:{6B64BE99-2A46-4F93-A7F6-57778F93729E}"
         "UpgradeCode" = "8:{36AD8D81-8871-4470-99D0-B1F9976323F0}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:JERN"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
