@@ -75,9 +75,9 @@
     <Compile Include="ValueProviders\ZipFileNameProvider.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SolutionZipper\SolutionZipper.csproj">
+    <ProjectReference Include="..\SolutionZipper\SolZipBasis.csproj">
       <Project>{FAECC790-26DC-4948-AF3A-D2EB9D750B16}</Project>
-      <Name>SolutionZipper</Name>
+      <Name>SolZipBasis %28SolZipBasis\SolZipBasis%29</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

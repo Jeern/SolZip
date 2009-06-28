@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("JERN")]
-[assembly: AssemblyProduct("SolutionZipper")]
+[assembly: AssemblyProduct("SolZip")]
 [assembly: AssemblyCopyright("Copyright ©  2009")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
-[assembly: AssemblyVersion("1.0.3.1")]
-[assembly: AssemblyFileVersion("1.0.3.1")]
+[assembly: AssemblyVersion("1.0.4.0")]
+[assembly: AssemblyFileVersion("1.0.4.0")]
