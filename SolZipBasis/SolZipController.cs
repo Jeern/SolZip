@@ -42,7 +42,64 @@ namespace SolZipBasis
             if (fileName.StartsWith(@"\"))
                 return CleanedUpFileName(fileName.Substring(1));
 
+            if (fileName.StartsWith(@".\"))
+                return CleanedUpFileName(fileName.Substring(2));
+
+            fileName = RemoveSingleDotFromFilePath(fileName);
+            fileName = RemoveDoubleDotFromFilePath(fileName); 
+
             return fileName;
+        }
+
+        /// <summary>
+        /// This method is here because WinZip has as problem wih paths containing .. and probably . too
+        /// This method removes all instances \.
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        private string RemoveSingleDotFromFilePath(string fileName)
+        {
+            int pos = fileName.IndexOf(@"\.\");
+
+            if (pos < 0)
+                return fileName;
+
+            if (fileName.Length == 3)
+                return fileName;
+
+            if(pos == 0)
+                return RemoveSingleDotFromFilePath(fileName.Substring(3));
+
+            return RemoveSingleDotFromFilePath(fileName.Substring(0, pos) + fileName.Substring(pos + 2)); 
+
+        }
+
+        /// <summary>
+        /// This method is here because WinZip has as problem wih paths containing .. and probably . too
+        /// This method removes all instances \..
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        private string RemoveDoubleDotFromFilePath(string fileName)
+        {
+            int pos = fileName.IndexOf(@"\..");
+
+            if (pos < 0)
+                return fileName;
+
+            if (fileName.Length == 3)
+                return fileName;
+
+            if (pos == 0)
+                return RemoveDoubleDotFromFilePath(fileName.Substring(1));
+
+            int posParent = fileName.Substring(0, pos).LastIndexOf(@"\");
+            
+            if(posParent <= 0)
+                return RemoveDoubleDotFromFilePath(fileName.Substring(pos +3));
+
+            return RemoveDoubleDotFromFilePath(fileName.Substring(0, posParent) + fileName.Substring(pos + 3));
+
         }
 
         public SolZipController(string zipFileName, bool excludeSZReadme, bool removeSourceControl)
