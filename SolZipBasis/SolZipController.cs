@@ -20,6 +20,7 @@ namespace SolZipBasis
         private bool m_RemoveSourceControl;
         private bool m_SZReadmeAlreadyAdded;
         private bool m_SolutionOrProject = false; //True if this Zip is a solution or project
+        private Dictionary<string, string> m_ZippedFiles = new Dictionary<string, string>(); //contains the names of the zipped files
 
         private string BeginingOfPath
         {
@@ -211,10 +212,15 @@ namespace SolZipBasis
             if (fileName.StartsWith(BeginingOfPath))
             {
                 byte[] fileArray = ReadFile(fileName);
-                ZipEntry entry = m_ZipEntryFactory.MakeFileEntry(ZipEntry.CleanName(ZipEntryFileName(fileName)));
-                entry.Size = fileArray.Length;
-                m_ZipStream.PutNextEntry(entry);
-                m_ZipStream.Write(fileArray, 0, fileArray.Length);
+                string zipEntryFileName = ZipEntry.CleanName(ZipEntryFileName(fileName));
+                if (!m_ZippedFiles.ContainsKey(zipEntryFileName))
+                {
+                    ZipEntry entry = m_ZipEntryFactory.MakeFileEntry(zipEntryFileName);
+                    entry.Size = fileArray.Length;
+                    m_ZipStream.PutNextEntry(entry);
+                    m_ZipStream.Write(fileArray, 0, fileArray.Length);
+                    m_ZippedFiles.Add(zipEntryFileName, zipEntryFileName);
+                }
             }
         }
 
@@ -222,8 +228,13 @@ namespace SolZipBasis
         {
             if (Directory.Exists(folderName))
             {
-                ZipEntry entry = m_ZipEntryFactory.MakeDirectoryEntry(ZipEntry.CleanName(ZipEntryFileName(folderName)));
-                m_ZipStream.PutNextEntry(entry);
+                string zipEntryFolderName = ZipEntry.CleanName(ZipEntryFileName(folderName));
+                if (!m_ZippedFiles.ContainsKey(zipEntryFolderName))
+                {
+                    ZipEntry entry = m_ZipEntryFactory.MakeDirectoryEntry(zipEntryFolderName);
+                    m_ZipStream.PutNextEntry(entry);
+                    m_ZippedFiles.Add(zipEntryFolderName, zipEntryFolderName);
+                }
             }
         }
 
