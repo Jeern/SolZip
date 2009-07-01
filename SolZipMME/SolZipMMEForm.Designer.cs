@@ -39,7 +39,7 @@
             this.ExcludeCheckBox = new System.Windows.Forms.CheckBox();
             this.ZipItButton = new System.Windows.Forms.Button();
             this.CancelItButton = new System.Windows.Forms.Button();
-            this.ZipFileFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.ZipFileNameDialog = new System.Windows.Forms.SaveFileDialog();
             this.FileToZipBrowser = new System.Windows.Forms.OpenFileDialog();
             this.RemoveSourceControlCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -160,9 +160,15 @@
             this.CancelItButton.UseVisualStyleBackColor = true;
             this.CancelItButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // ZipFileNameDialog
+            // 
+            this.ZipFileNameDialog.DefaultExt = "zip";
+            this.ZipFileNameDialog.Filter = "Zip Archive|*.zip";
+            this.ZipFileNameDialog.Title = "Choose Zip file";
+            // 
             // FileToZipBrowser
             // 
-            this.FileToZipBrowser.FileName = "openFileDialog1";
+            this.FileToZipBrowser.AddExtension = false;
             // 
             // RemoveSourceControlCheckBox
             // 
@@ -221,7 +227,7 @@
         private System.Windows.Forms.CheckBox ExcludeCheckBox;
         private System.Windows.Forms.Button ZipItButton;
         private System.Windows.Forms.Button CancelItButton;
-        private System.Windows.Forms.FolderBrowserDialog ZipFileFolderBrowser;
+        private System.Windows.Forms.SaveFileDialog ZipFileNameDialog;
         private System.Windows.Forms.OpenFileDialog FileToZipBrowser;
         private System.Windows.Forms.CheckBox RemoveSourceControlCheckBox;
     }
