@@ -28,9 +28,9 @@ namespace SolZipMME
 
         private void ZipFileButton_Click(object sender, EventArgs e)
         {
-            ZipFileFolderBrowser.SelectedPath = ZipFileTextBox.Text;
-            ZipFileFolderBrowser.ShowDialog(this);
-            ZipFileTextBox.Text = ZipFileFolderBrowser.SelectedPath;
+            ZipFileNameDialog.FileName = ZipFileTextBox.Text;
+            ZipFileNameDialog.ShowDialog(this);
+            ZipFileTextBox.Text = ZipFileNameDialog.FileName;
         }
 
         private void ZipItButton_Click(object sender, EventArgs e)
