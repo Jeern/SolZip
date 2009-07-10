@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_4EF8B978BFB610D86F5294FA1EBC275D"
-        "OwnerKey" = "8:_91DE914682174AADAFA332CF84835A59"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_91DE914682174AADAFA332CF84835A59"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -34,7 +28,13 @@
         "Entry"
         {
         "MsmKey" = "8:_CCAD120AF64072C85F201F86ED817F4C"
-        "OwnerKey" = "8:_4EF8B978BFB610D86F5294FA1EBC275D"
+        "OwnerKey" = "8:_D860AFE875610D8CF9774D32EE938900"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D860AFE875610D8CF9774D32EE938900"
+        "OwnerKey" = "8:_91DE914682174AADAFA332CF84835A59"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,13 +52,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4EF8B978BFB610D86F5294FA1EBC275D"
+        "OwnerKey" = "8:_E20206E7790D4246AF387DA4EC44570E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E20206E7790D4246AF387DA4EC44570E"
+        "OwnerKey" = "8:_D860AFE875610D8CF9774D32EE938900"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -200,20 +200,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4EF8B978BFB610D86F5294FA1EBC275D"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CCAD120AF64072C85F201F86ED817F4C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SolZipBasis, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4EF8B978BFB610D86F5294FA1EBC275D"
+                    "_CCAD120AF64072C85F201F86ED817F4C"
                     {
-                    "Name" = "8:SolZipBasis.dll"
+                    "Name" = "8:ICSharpCode.SharpZipLib.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:SolZipBasis.dll"
+            "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C8E1522149EB4D708190C39A8DB34446"
@@ -231,20 +231,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CCAD120AF64072C85F201F86ED817F4C"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D860AFE875610D8CF9774D32EE938900"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SolZipBasis, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CCAD120AF64072C85F201F86ED817F4C"
+                    "_D860AFE875610D8CF9774D32EE938900"
                     {
-                    "Name" = "8:ICSharpCode.SharpZipLib.dll"
+                    "Name" = "8:SolZipBasis.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
+            "SourcePath" = "8:SolZipBasis.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C8E1522149EB4D708190C39A8DB34446"
@@ -318,20 +318,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SolZip"
-        "ProductCode" = "8:{C0F323BE-ADE5-435C-AB18-3A747A084C91}"
-        "PackageCode" = "8:{4A6CBCE8-624D-48AE-B220-7EF699636BE9}"
+        "ProductCode" = "8:{78B56B65-5C47-4FC1-B7F6-96AC5B8A9D76}"
+        "PackageCode" = "8:{3E426214-E3F9-4DFF-A2F9-89DED2FA7807}"
         "UpgradeCode" = "8:{EAF3C218-134E-4559-B8B2-9EF174EC30ED}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.0"
-        "Manufacturer" = "8:JERN"
+        "ProductVersion" = "8:1.2.0"
+        "Manufacturer" = "8:Jern"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:SolZip"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:JERN"
+        "ARPCONTACT" = "8:Jern"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"

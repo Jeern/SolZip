@@ -6,6 +6,7 @@ using Microsoft.Practices.RecipeFramework;
 using System.IO;
 using System.Diagnostics;
 using System.Windows.Forms;
+using SolZipBasis;
 
 namespace SolZipGuidance.Actions
 {
@@ -19,7 +20,7 @@ namespace SolZipGuidance.Actions
         /// </summary>
         public override void Execute()
         {
-            Clipboard.SetText(TextToCopy);
+            SolZipHelper.CopyFileNameToClipboard(TextToCopy);
         }
 
         public override void Undo()

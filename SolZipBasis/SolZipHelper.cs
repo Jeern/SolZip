@@ -121,9 +121,16 @@ namespace SolZipBasis
             } 
         }
 
-        private static void CopyFileNameToClipboard(string zipFileName)
+        public static void CopyFileNameToClipboard(string zipFileName)
         {
-            Clipboard.SetText(zipFileName);
+            try
+            {
+                Clipboard.SetText(zipFileName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Clipboard problem: " + ex.ToString());
+            }
         }
     }
 }
