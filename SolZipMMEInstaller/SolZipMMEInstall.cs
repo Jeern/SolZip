@@ -18,7 +18,7 @@ namespace SolZipMMEInstaller
         private const string AddInRegKey = @"Software\Jern\ManagedMenuExtensions";
         private const string AddInRegValueKey = "AddInMainDirectory";
         private const string AddInSubDir = "AddIns";
-        private const string NewDir = "SoLZip";
+        private const string NewDir = "SolZip";
         private const string TargetAssemblyKey = "assemblypath";
         private const string SearchString = "*.dll";
         private const string ExcludeString1 = "Installer.dll";
