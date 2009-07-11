@@ -39,7 +39,10 @@ namespace SolZipMME
 
         public override Regex VisibleWhenCompliantName
         {
-            get { return null; }
+            get 
+            { 
+                return new Regex(@"\.csproj");
+            }
         }
     }
 }

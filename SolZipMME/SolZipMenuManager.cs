@@ -9,7 +9,7 @@ using System.IO;
 
 namespace SolZipMME
 {
-    [AddIn("SolZipManagedAddIn", Version = "1.0.0.0")]
+    [AddIn("SolZipManagedAddIn", Version = "1.2.0.3")]
     public class SolZipMenuManager : MenuManagerAddInView 
     {
         public override List<MenuItemView> CreateMenus(MenuContextView context)
