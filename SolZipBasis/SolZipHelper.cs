@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace SolZipBasis
 {
@@ -127,9 +128,11 @@ namespace SolZipBasis
             {
                 Clipboard.SetText(zipFileName);
             }
-            catch (Exception ex)
+            catch (ExternalException)
             {
-                MessageBox.Show("Clipboard problem: " + ex.ToString());
+                //Apparently this exception occurs on Windows Vista. Seems to have no effect though.
+                //So I just "eat" it. Not nice but... Apparently it should be possible to control this
+                //with the UIPermission class, for now, no success however.
             }
         }
     }
