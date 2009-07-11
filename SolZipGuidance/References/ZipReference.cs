@@ -6,6 +6,7 @@ using Microsoft.Practices.RecipeFramework;
 using System.Runtime.Serialization;
 using EnvDTE;
 using System.IO;
+using SolZipBasis;
 
 namespace SolZipGuidance.References
 {
@@ -22,7 +23,7 @@ namespace SolZipGuidance.References
         public override bool IsEnabledFor(object target)
         {
             //Menuen skal enables hvis det markerede er en Solution, Project eller Item
-            return IsSolution(target) || IsProject(target) || IsFile(target);
+            return IsSolution(target) || IsCsharpProject(target) || IsFile(target);
         }
 
         private bool IsSolution(object target)
@@ -31,10 +32,11 @@ namespace SolZipGuidance.References
             return (solution != null && File.Exists(solution.FileName));
         }
 
-        private bool IsProject(object target)
+        private bool IsCsharpProject(object target)
         {
             var project = target as Project;
-            return (project != null && File.Exists(project.FileName));
+            return (project != null && File.Exists(project.FileName) && 
+                project.FileName.EndsWith(SolZipConstants.ProjectExtension));
         }
 
         private bool IsFile(object target)
