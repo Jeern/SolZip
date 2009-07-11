@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using SolZipBasis;
+using System.Windows.Forms;
 
 namespace SolZipTest
 {
@@ -86,5 +87,12 @@ namespace SolZipTest
             Assert.IsTrue(content.Length > 500000, string.Format("The file {0} is smaller than 500000 bytes", m_ZipFileName));
         }
 
+        [TestMethod]
+        public void ClipboardWorks()
+        {
+            const string something = "Hello";
+            SolZipHelper.CopyFileNameToClipboard(something);
+            Assert.AreEqual(something, Clipboard.GetText());
+        }
     }
 }
