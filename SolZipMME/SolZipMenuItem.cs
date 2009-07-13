@@ -41,7 +41,7 @@ namespace SolZipMME
         {
             get 
             { 
-                return new Regex(@"\.csproj");
+                return null;
             }
         }
     }

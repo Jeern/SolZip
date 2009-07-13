@@ -6,6 +6,7 @@ using System.AddIn;
 using ManagedMenuAddInViews;
 using System.Windows.Forms;
 using System.IO;
+using SolZipBasis;
 
 namespace SolZipMME
 {
@@ -14,8 +15,9 @@ namespace SolZipMME
     {
         public override List<MenuItemView> CreateMenus(MenuContextView context)
         {
-            if (context.Levels == ContextLevels.Solution || context.Levels == ContextLevels.Project
-                || context.Levels == ContextLevels.Item)
+            if (context.Levels == ContextLevels.Solution || 
+                context.Levels == ContextLevels.Project || // context.FileName.EndsWith(SolZipConstants.ProjectExtension))  
+                context.Levels == ContextLevels.Item)
             {
                 return new List<MenuItemView>() { new SolZipMenuItem("Compress with Zip...") };
             }
@@ -26,7 +28,7 @@ namespace SolZipMME
         {
             if (types != ApplicationTypes.VS2008)
                 return null;
-
+          
             return "SolZip (MME)";
         }
 
