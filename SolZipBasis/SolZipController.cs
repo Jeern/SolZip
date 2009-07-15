@@ -191,10 +191,42 @@ namespace SolZipBasis
 
             foreach (string item in references.Union(itemAttributes))
             {
-                ZipFile(Path.Combine(projectFilePath, item));
+                ZipFile(ReplacePlaceholderVars(projectFilePath, item));
             }
             ZipFile(projectFile);
         }
+
+        /// <summary>
+        /// Only recognizes $(SolutionDir) and $(ProjectDir) for now.
+        /// </summary>
+        /// <param name="projectFilePath"></param>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        private string ReplacePlaceholderVars(string projectFilePath, string item)
+        {
+            const string SolutionDir = "$(SolutionDir)";
+            const string ProjectDir = "$(ProjectDir)";
+
+            if (item.StartsWith(SolutionDir))
+            {
+                return ReplacePlaceholderVar(SolutionDir, m_TopPath, item);
+            }
+            else if (item.StartsWith(ProjectDir))
+            {
+                return ReplacePlaceholderVar(ProjectDir, projectFilePath, item);
+            }
+            else
+            {
+                return Path.Combine(projectFilePath, item);
+            }
+        }
+
+        private string ReplacePlaceholderVar(string var, string replacement, string item)
+        {
+            return Path.Combine(replacement, item.Substring(var.Length));
+        }
+
+
 
         public void ZipFile(string fileName)
         {
