@@ -7,7 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8F52CA03-010
 		Lib\DosPrompt.JPG = Lib\DosPrompt.JPG
 		Lib\GlobalAssemblyInfo.cs = Lib\GlobalAssemblyInfo.cs
 		Lib\ICSharpCode.SharpZipLib.dll = Lib\ICSharpCode.SharpZipLib.dll
-		Lib\ManagedMenuAddInViews.dll = Lib\ManagedMenuAddInViews.dll
 		Lib\Microsoft.Practices.RecipeFramework.Extensions.dll = Lib\Microsoft.Practices.RecipeFramework.Extensions.dll
 		Lib\SolZipGAX1.jpg = Lib\SolZipGAX1.jpg
 		Lib\SolZipGAX2.JPG = Lib\SolZipGAX2.JPG

@@ -10,7 +10,7 @@ using SolZipBasis;
 
 namespace SolZipMME
 {
-    [AddIn("SolZipManagedAddIn", Version = "1.2.0.3")]
+    [AddIn("SolZipManagedAddIn", Version = "1.2.0.4")]
     public class SolZipMenuManager : MenuManagerAddInView 
     {
         public override List<MenuItemView> CreateMenus(MenuContextView context)
