@@ -21,50 +21,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_08EE08471122D9F3CA01A7497AEA51D2"
-        "OwnerKey" = "8:_051D83B3755C4568BE15362205E3DB93"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_08EE08471122D9F3CA01A7497AEA51D2"
-        "OwnerKey" = "8:_BB09513A5326475AB240B5257BC9E97D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1615484517474DAFBAB18E49A9F09689"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_296377B41593E7123FD91AD78A76DDA3"
-        "OwnerKey" = "8:_6551ED338523419C97FE9C88C43A8592"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_296377B41593E7123FD91AD78A76DDA3"
-        "OwnerKey" = "8:_BB09513A5326475AB240B5257BC9E97D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_296377B41593E7123FD91AD78A76DDA3"
-        "OwnerKey" = "8:_08EE08471122D9F3CA01A7497AEA51D2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_296377B41593E7123FD91AD78A76DDA3"
-        "OwnerKey" = "8:_051D83B3755C4568BE15362205E3DB93"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_296377B41593E7123FD91AD78A76DDA3"
+        "MsmKey" = "8:_27E525F5F6FA8FCF774BED2AA570B9AF"
         "OwnerKey" = "8:_A6125E2AD28940A7BDCB8B4B1B21D563"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_27E525F5F6FA8FCF774BED2AA570B9AF"
+        "OwnerKey" = "8:_C6CD842AF0A3440FB6FB610E2D7E6DD0"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -93,8 +63,50 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_5624292D5B5C750F25A62449643445E2"
+        "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5624292D5B5C750F25A62449643445E2"
+        "OwnerKey" = "8:_C6CD842AF0A3440FB6FB610E2D7E6DD0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B06B86D193E5B22F4C79714D4E5CCF6"
+        "OwnerKey" = "8:_051D83B3755C4568BE15362205E3DB93"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B06B86D193E5B22F4C79714D4E5CCF6"
+        "OwnerKey" = "8:_BB09513A5326475AB240B5257BC9E97D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B06B86D193E5B22F4C79714D4E5CCF6"
+        "OwnerKey" = "8:_A6125E2AD28940A7BDCB8B4B1B21D563"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B06B86D193E5B22F4C79714D4E5CCF6"
+        "OwnerKey" = "8:_6551ED338523419C97FE9C88C43A8592"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B06B86D193E5B22F4C79714D4E5CCF6"
+        "OwnerKey" = "8:_9871462F3FD749D3FB48176BB8C1CF09"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -123,18 +135,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_8E0E4EC260F6AE882C1D2752F7FC2D13"
-        "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8E0E4EC260F6AE882C1D2752F7FC2D13"
-        "OwnerKey" = "8:_C6CD842AF0A3440FB6FB610E2D7E6DD0"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_8F662A8725C7BD887ED15CB4ECC5F632"
         "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
         "MsmSig" = "8:_UNDEFINED"
@@ -149,6 +149,18 @@
         {
         "MsmKey" = "8:_949D3A2289684AF38BB956F1DFB45413"
         "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9871462F3FD749D3FB48176BB8C1CF09"
+        "OwnerKey" = "8:_051D83B3755C4568BE15362205E3DB93"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9871462F3FD749D3FB48176BB8C1CF09"
+        "OwnerKey" = "8:_BB09513A5326475AB240B5257BC9E97D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -219,18 +231,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CDA0A2BED9133257532AC77C46C24B85"
-        "OwnerKey" = "8:_A6125E2AD28940A7BDCB8B4B1B21D563"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_CDA0A2BED9133257532AC77C46C24B85"
-        "OwnerKey" = "8:_C6CD842AF0A3440FB6FB610E2D7E6DD0"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
         "MsmSig" = "8:_UNDEFINED"
@@ -274,7 +274,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CDA0A2BED9133257532AC77C46C24B85"
+        "OwnerKey" = "8:_27E525F5F6FA8FCF774BED2AA570B9AF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -310,19 +310,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_296377B41593E7123FD91AD78A76DDA3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_08EE08471122D9F3CA01A7497AEA51D2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_051D83B3755C4568BE15362205E3DB93"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9871462F3FD749D3FB48176BB8C1CF09"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5B06B86D193E5B22F4C79714D4E5CCF6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5624292D5B5C750F25A62449643445E2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -335,12 +341,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_8F662A8725C7BD887ED15CB4ECC5F632"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8E0E4EC260F6AE882C1D2752F7FC2D13"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -452,7 +452,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuVS2008, Version=0.1.4.1, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuVS2008, Version=0.1.5.1, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_051D83B3755C4568BE15362205E3DB93"
@@ -479,37 +479,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_08EE08471122D9F3CA01A7497AEA51D2"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:TRUE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuHost, Version=0.1.4.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_08EE08471122D9F3CA01A7497AEA51D2"
-                    {
-                    "Name" = "8:ManagedMenuHost.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:ManagedMenuHost.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1615484517474DAFBAB18E49A9F09689"
             {
             "SourcePath" = "8:..\\MMEItems\\ManagedMenusVS2008.AddIn"
@@ -530,23 +499,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_296377B41593E7123FD91AD78A76DDA3"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_27E525F5F6FA8FCF774BED2AA570B9AF"
             {
             "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:TRUE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuHostViews, Version=0.1.4.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuContracts, Version=0.1.5.1, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_296377B41593E7123FD91AD78A76DDA3"
+                    "_27E525F5F6FA8FCF774BED2AA570B9AF"
                     {
-                    "Name" = "8:ManagedMenuHostViews.dll"
+                    "Name" = "8:ManagedMenuContracts.DLL"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:ManagedMenuHostViews.dll"
+            "SourcePath" = "8:ManagedMenuContracts.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
+            "Folder" = "8:_CAE75F459AF649E8B6CC08C0BA487AA4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -596,7 +565,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.4.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.5.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_520473DB9E994F2AA569D3B8FE4860C2"
@@ -627,7 +596,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.4.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.5.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_5300261708A0401BA5A0A6EDCA285512"
@@ -654,11 +623,73 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5624292D5B5C750F25A62449643445E2"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.5.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_5624292D5B5C750F25A62449643445E2"
+                    {
+                    "Name" = "8:ManagedMenuAddInViews.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:ManagedMenuAddInViews.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5B06B86D193E5B22F4C79714D4E5CCF6"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuHostViews, Version=0.1.5.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_5B06B86D193E5B22F4C79714D4E5CCF6"
+                    {
+                    "Name" = "8:ManagedMenuHostViews.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:ManagedMenuHostViews.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6551ED338523419C97FE9C88C43A8592"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuHost, Version=0.1.4.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuHost, Version=0.1.5.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_6551ED338523419C97FE9C88C43A8592"
@@ -745,37 +776,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8E0E4EC260F6AE882C1D2752F7FC2D13"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.4.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_8E0E4EC260F6AE882C1D2752F7FC2D13"
-                    {
-                    "Name" = "8:ManagedMenuAddInViews.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:ManagedMenuAddInViews.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8F662A8725C7BD887ED15CB4ECC5F632"
             {
             "AssemblyRegister" = "3:1"
@@ -811,7 +811,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SolZipBasis, Version=1.2.0.3, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SolZipBasis, Version=1.2.0.5, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_949D3A2289684AF38BB956F1DFB45413"
@@ -838,11 +838,42 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9871462F3FD749D3FB48176BB8C1CF09"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuHost, Version=0.1.5.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9871462F3FD749D3FB48176BB8C1CF09"
+                    {
+                    "Name" = "8:ManagedMenuHost.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:ManagedMenuHost.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9A8B77983AF5417BB72FA5B4B8CF044E"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuContracts, Version=0.1.4.1, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuContracts, Version=0.1.5.1, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_9A8B77983AF5417BB72FA5B4B8CF044E"
@@ -873,7 +904,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuHostAdapters, Version=0.1.4.1, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuHostAdapters, Version=0.1.5.1, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_A6125E2AD28940A7BDCB8B4B1B21D563"
@@ -935,7 +966,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuVS2008, Version=0.1.4.1, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuVS2008, Version=0.1.5.1, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_BB09513A5326475AB240B5257BC9E97D"
@@ -986,7 +1017,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuHostViews, Version=0.1.4.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuHostViews, Version=0.1.5.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_BEFDA87C738445E8A0CC74EE0F754BFE"
@@ -1048,7 +1079,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInAdapters, Version=0.1.4.1, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInAdapters, Version=0.1.5.1, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_C6CD842AF0A3440FB6FB610E2D7E6DD0"
@@ -1073,37 +1104,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CDA0A2BED9133257532AC77C46C24B85"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuContracts, Version=0.1.4.1, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_CDA0A2BED9133257532AC77C46C24B85"
-                    {
-                    "Name" = "8:ManagedMenuContracts.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:ManagedMenuContracts.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_CAE75F459AF649E8B6CC08C0BA487AA4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -1489,8 +1489,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1202"
+                            "Setting" = "3:2"
+                            "Value" = "8:This program is licensed under Ms-PL. See http://solzip.codeplex.com/license."
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -1813,8 +1813,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1202"
+                            "Setting" = "3:2"
+                            "Value" = "8:This program is licensed under Ms-PL. See http://solzip.codeplex.com/license."
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }

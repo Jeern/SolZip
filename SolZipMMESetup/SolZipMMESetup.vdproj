@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0D7A2C29ABE2E7F4D0160893AF47219E"
+        "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -45,12 +51,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F913239E9A95B7F3695E664DA0B1047C"
-        "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
         "MsmSig" = "8:_UNDEFINED"
@@ -64,6 +64,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0D7A2C29ABE2E7F4D0160893AF47219E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A16AA24003974015B05ABC89F2DF124E"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -71,12 +77,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D27382C0492F274AA383CBCA3E6FD05C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F913239E9A95B7F3695E664DA0B1047C"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -212,11 +212,42 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0D7A2C29ABE2E7F4D0160893AF47219E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.5.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_0D7A2C29ABE2E7F4D0160893AF47219E"
+                    {
+                    "Name" = "8:ManagedMenuAddInViews.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:ManagedMenuAddInViews.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A16AA24003974015B05ABC89F2DF124E"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SolZipBasis, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SolZipBasis, Version=1.2.0.5, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_A16AA24003974015B05ABC89F2DF124E"
@@ -257,37 +288,6 @@
                     }
                 }
             "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F913239E9A95B7F3695E664DA0B1047C"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ManagedMenuAddInViews, Version=0.1.4.1, Culture=neutral, PublicKeyToken=fb039b3d26e2ca59, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_F913239E9A95B7F3695E664DA0B1047C"
-                    {
-                    "Name" = "8:ManagedMenuAddInViews.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:ManagedMenuAddInViews.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
@@ -546,8 +546,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1202"
+                            "Setting" = "3:2"
+                            "Value" = "8:This program is licensed under Ms-PL. See http://solzip.codeplex.com/license."
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -779,8 +779,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1202"
+                            "Setting" = "3:2"
+                            "Value" = "8:This program is licensed under Ms-PL. See http://solzip.codeplex.com/license."
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
