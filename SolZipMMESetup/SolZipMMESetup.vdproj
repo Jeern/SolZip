@@ -21,6 +21,30 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1252CEB5BFC6A656C30D21E6F7CFCAF7"
+        "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4873F26F9ABF8B2A967C4E6A405901E3"
+        "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4873F26F9ABF8B2A967C4E6A405901E3"
+        "OwnerKey" = "8:_1252CEB5BFC6A656C30D21E6F7CFCAF7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_53C5093240CD46C080B2A69338A25F25"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -33,32 +57,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A16AA24003974015B05ABC89F2DF124E"
-        "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D27382C0492F274AA383CBCA3E6FD05C"
-        "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D27382C0492F274AA383CBCA3E6FD05C"
-        "OwnerKey" = "8:_A16AA24003974015B05ABC89F2DF124E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_59813BED26C64B1F90C3D3A46A533946"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8E4BD495BC0D447ABFD986930C91C7F6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,13 +70,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A16AA24003974015B05ABC89F2DF124E"
+        "OwnerKey" = "8:_8E4BD495BC0D447ABFD986930C91C7F6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D27382C0492F274AA383CBCA3E6FD05C"
+        "OwnerKey" = "8:_1252CEB5BFC6A656C30D21E6F7CFCAF7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4873F26F9ABF8B2A967C4E6A405901E3"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -243,14 +249,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A16AA24003974015B05ABC89F2DF124E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1252CEB5BFC6A656C30D21E6F7CFCAF7"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:SolZipBasis, Version=1.2.0.5, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A16AA24003974015B05ABC89F2DF124E"
+                    "_1252CEB5BFC6A656C30D21E6F7CFCAF7"
                     {
                     "Name" = "8:SolZipBasis.dll"
                     "Attributes" = "3:512"
@@ -274,14 +280,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D27382C0492F274AA383CBCA3E6FD05C"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4873F26F9ABF8B2A967C4E6A405901E3"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D27382C0492F274AA383CBCA3E6FD05C"
+                    "_4873F26F9ABF8B2A967C4E6A405901E3"
                     {
                     "Name" = "8:ICSharpCode.SharpZipLib.dll"
                     "Attributes" = "3:512"
@@ -303,6 +309,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_53C5093240CD46C080B2A69338A25F25"
+            {
+            "SourcePath" = "8:..\\Lib\\SolZip.ico"
+            "TargetName" = "8:SolZip.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -393,7 +419,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_53C5093240CD46C080B2A69338A25F25"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -897,7 +923,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_59813BED26C64B1F90C3D3A46A533946"
             {
-            "SourcePath" = "8:..\\SolZipMME\\obj\\Release\\SolZipMME.dll"
+            "SourcePath" = "8:..\\SolZipMME\\obj\\Debug\\SolZipMME.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
@@ -925,7 +951,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8E4BD495BC0D447ABFD986930C91C7F6"
             {
-            "SourcePath" = "8:..\\SolZipMMEInstaller\\obj\\Release\\SolZipMMEInstaller.dll"
+            "SourcePath" = "8:..\\SolZipMMEInstaller\\obj\\Debug\\SolZipMMEInstaller.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_8FCA88672FBB4CFFA8254BED951F1B67"
