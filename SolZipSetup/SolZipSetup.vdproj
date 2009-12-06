@@ -15,26 +15,32 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_3FF40977C571CFD644AB6C8FAAC4EF4A"
+        "OwnerKey" = "8:_91DE914682174AADAFA332CF84835A59"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3FF40977C571CFD644AB6C8FAAC4EF4A"
+        "OwnerKey" = "8:_4EF8B978BFB610D86F5294FA1EBC275D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4EF8B978BFB610D86F5294FA1EBC275D"
+        "OwnerKey" = "8:_91DE914682174AADAFA332CF84835A59"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_91DE914682174AADAFA332CF84835A59"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CCAD120AF64072C85F201F86ED817F4C"
-        "OwnerKey" = "8:_91DE914682174AADAFA332CF84835A59"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_CCAD120AF64072C85F201F86ED817F4C"
-        "OwnerKey" = "8:_D860AFE875610D8CF9774D32EE938900"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D860AFE875610D8CF9774D32EE938900"
-        "OwnerKey" = "8:_91DE914682174AADAFA332CF84835A59"
+        "MsmKey" = "8:_DBDFCFAC21B24EF58302CC7919DBD4B7"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -58,13 +64,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D860AFE875610D8CF9774D32EE938900"
+        "OwnerKey" = "8:_4EF8B978BFB610D86F5294FA1EBC275D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CCAD120AF64072C85F201F86ED817F4C"
+        "OwnerKey" = "8:_3FF40977C571CFD644AB6C8FAAC4EF4A"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -200,14 +206,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CCAD120AF64072C85F201F86ED817F4C"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3FF40977C571CFD644AB6C8FAAC4EF4A"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CCAD120AF64072C85F201F86ED817F4C"
+                    "_3FF40977C571CFD644AB6C8FAAC4EF4A"
                     {
                     "Name" = "8:ICSharpCode.SharpZipLib.dll"
                     "Attributes" = "3:512"
@@ -231,14 +237,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D860AFE875610D8CF9774D32EE938900"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4EF8B978BFB610D86F5294FA1EBC275D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:SolZipBasis, Version=1.2.0.5, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D860AFE875610D8CF9774D32EE938900"
+                    "_4EF8B978BFB610D86F5294FA1EBC275D"
                     {
                     "Name" = "8:SolZipBasis.dll"
                     "Attributes" = "3:512"
@@ -260,6 +266,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DBDFCFAC21B24EF58302CC7919DBD4B7"
+            {
+            "SourcePath" = "8:..\\Lib\\SolZip.ico"
+            "TargetName" = "8:SolZip.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_C8E1522149EB4D708190C39A8DB34446"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -335,7 +361,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_DBDFCFAC21B24EF58302CC7919DBD4B7"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -839,7 +865,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_91DE914682174AADAFA332CF84835A59"
             {
-            "SourcePath" = "8:..\\SolZip\\obj\\Release\\SolZip.exe"
+            "SourcePath" = "8:..\\SolZip\\obj\\Debug\\SolZip.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C8E1522149EB4D708190C39A8DB34446"
@@ -867,7 +893,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E20206E7790D4246AF387DA4EC44570E"
             {
-            "SourcePath" = "8:..\\SolZipInstaller\\obj\\Release\\SolZipInstaller.dll"
+            "SourcePath" = "8:..\\SolZipInstaller\\obj\\Debug\\SolZipInstaller.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C8E1522149EB4D708190C39A8DB34446"
