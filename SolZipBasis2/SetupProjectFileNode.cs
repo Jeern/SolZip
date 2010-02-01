@@ -17,7 +17,7 @@ namespace SolZipBasis2
         /// </summary>
         /// <param name="parent"></param>
         /// <returns></returns>
-        public override List<int> GetLineNumbers(FileNode parent)
+        public override List<int> GetLineNumbersInParentContent(FileNode parent)
         {
             throw new NotImplementedException();
         }
@@ -27,7 +27,7 @@ namespace SolZipBasis2
         /// object, and construct child nodes where relevant. E.g create a 3 ProjectFileNodes, if this
         /// object is a SolutionFileNode, and it contains 3 projects.
         /// </summary>
-        public override void ReadChildren()
+        public override void CreateChildNodes()
         {
             throw new NotImplementedException();
         }
