@@ -5,7 +5,7 @@ using System.Text;
 using System.IO;
 using System.Runtime.CompilerServices;
 
-namespace SolZipBasis
+namespace SolZipBasis2
 {
     public class SolutionFileReader : IDisposable
     {

@@ -15,6 +15,7 @@ namespace SolZipMME
         public SolZipMMEForm(string fileToZip)
         {
             InitializeComponent();
+            Height = 202;
             FileToZipTextBox.Text = fileToZip;
             ZipFileTextBox.Text = SolZipHelper.GetZipFileName(fileToZip);
         }
@@ -64,5 +65,9 @@ namespace SolZipMME
             Close();
         }
 
+        private void ViewItemsButton_Click(object sender, EventArgs e)
+        {
+            Height = 582;
+        }
     }
 }

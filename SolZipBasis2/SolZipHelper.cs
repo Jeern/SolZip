@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace SolZipBasis
+namespace SolZipBasis2
 {
     public static class SolZipHelper
     {

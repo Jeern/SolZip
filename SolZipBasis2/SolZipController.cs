@@ -8,7 +8,7 @@ using System.IO;
 using System.Xml.Linq;
 using System.Reflection;
 
-namespace SolZipBasis
+namespace SolZipBasis2
 {
     public class SolZipController : IDisposable
     {
@@ -336,7 +336,7 @@ namespace SolZipBasis
                 return;
             m_SZReadmeAlreadyAdded = true;
             
-            Stream readmeFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("SolZipBasis.readme.txt");
+            Stream readmeFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("SolZipBasis2.readme.txt");
             byte[] fileArray = new byte[readmeFile.Length];
             readmeFile.Read(fileArray, 0, (int)readmeFile.Length);
             //ZipEntry entry = m_ZipEntryFactory.MakeFileEntry(ZipEntry.CleanName(ZipEntryFileName(GetReadMeName(topPath, 0))));
