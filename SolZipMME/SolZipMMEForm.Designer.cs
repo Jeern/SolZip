@@ -42,6 +42,8 @@
             this.ZipFileNameDialog = new System.Windows.Forms.SaveFileDialog();
             this.FileToZipBrowser = new System.Windows.Forms.OpenFileDialog();
             this.RemoveSourceControlCheckBox = new System.Windows.Forms.CheckBox();
+            this.ViewItemsButton = new System.Windows.Forms.Button();
+            this.ZipItemsView = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
             // FileToZipLabel
@@ -59,13 +61,13 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.FileToZipTextBox.Location = new System.Drawing.Point(100, 10);
             this.FileToZipTextBox.Name = "FileToZipTextBox";
-            this.FileToZipTextBox.Size = new System.Drawing.Size(339, 20);
+            this.FileToZipTextBox.Size = new System.Drawing.Size(341, 20);
             this.FileToZipTextBox.TabIndex = 1;
             // 
             // FileToZipButton
             // 
             this.FileToZipButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FileToZipButton.Location = new System.Drawing.Point(445, 8);
+            this.FileToZipButton.Location = new System.Drawing.Point(447, 8);
             this.FileToZipButton.Name = "FileToZipButton";
             this.FileToZipButton.Size = new System.Drawing.Size(34, 23);
             this.FileToZipButton.TabIndex = 2;
@@ -88,13 +90,13 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.ZipFileTextBox.Location = new System.Drawing.Point(100, 37);
             this.ZipFileTextBox.Name = "ZipFileTextBox";
-            this.ZipFileTextBox.Size = new System.Drawing.Size(339, 20);
+            this.ZipFileTextBox.Size = new System.Drawing.Size(341, 20);
             this.ZipFileTextBox.TabIndex = 4;
             // 
             // ZipFileButton
             // 
             this.ZipFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ZipFileButton.Location = new System.Drawing.Point(445, 35);
+            this.ZipFileButton.Location = new System.Drawing.Point(447, 35);
             this.ZipFileButton.Name = "ZipFileButton";
             this.ZipFileButton.Size = new System.Drawing.Size(34, 23);
             this.ZipFileButton.TabIndex = 5;
@@ -140,10 +142,10 @@
             // 
             this.ZipItButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ZipItButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.ZipItButton.Location = new System.Drawing.Point(323, 141);
+            this.ZipItButton.Location = new System.Drawing.Point(244, 521);
             this.ZipItButton.Name = "ZipItButton";
             this.ZipItButton.Size = new System.Drawing.Size(75, 23);
-            this.ZipItButton.TabIndex = 10;
+            this.ZipItButton.TabIndex = 11;
             this.ZipItButton.Text = "&Zip it";
             this.ZipItButton.UseVisualStyleBackColor = true;
             this.ZipItButton.Click += new System.EventHandler(this.ZipItButton_Click);
@@ -152,10 +154,10 @@
             // 
             this.CancelItButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CancelItButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelItButton.Location = new System.Drawing.Point(404, 141);
+            this.CancelItButton.Location = new System.Drawing.Point(406, 521);
             this.CancelItButton.Name = "CancelItButton";
             this.CancelItButton.Size = new System.Drawing.Size(75, 23);
-            this.CancelItButton.TabIndex = 11;
+            this.CancelItButton.TabIndex = 13;
             this.CancelItButton.Text = "&Cancel";
             this.CancelItButton.UseVisualStyleBackColor = true;
             this.CancelItButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -182,13 +184,34 @@
             this.RemoveSourceControlCheckBox.Text = "Do not include source control bindings";
             this.RemoveSourceControlCheckBox.UseVisualStyleBackColor = true;
             // 
+            // ViewItemsButton
+            // 
+            this.ViewItemsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ViewItemsButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.ViewItemsButton.Location = new System.Drawing.Point(325, 521);
+            this.ViewItemsButton.Name = "ViewItemsButton";
+            this.ViewItemsButton.Size = new System.Drawing.Size(75, 23);
+            this.ViewItemsButton.TabIndex = 12;
+            this.ViewItemsButton.Text = "&View items...";
+            this.ViewItemsButton.UseVisualStyleBackColor = true;
+            this.ViewItemsButton.Click += new System.EventHandler(this.ViewItemsButton_Click);
+            // 
+            // ZipItemsView
+            // 
+            this.ZipItemsView.Location = new System.Drawing.Point(19, 176);
+            this.ZipItemsView.Name = "ZipItemsView";
+            this.ZipItemsView.Size = new System.Drawing.Size(462, 335);
+            this.ZipItemsView.TabIndex = 10;
+            // 
             // SolZipMMEForm
             // 
             this.AcceptButton = this.ZipItButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CancelItButton;
-            this.ClientSize = new System.Drawing.Size(488, 174);
+            this.ClientSize = new System.Drawing.Size(490, 554);
+            this.Controls.Add(this.ZipItemsView);
+            this.Controls.Add(this.ViewItemsButton);
             this.Controls.Add(this.RemoveSourceControlCheckBox);
             this.Controls.Add(this.CancelItButton);
             this.Controls.Add(this.ZipItButton);
@@ -230,5 +253,7 @@
         private System.Windows.Forms.SaveFileDialog ZipFileNameDialog;
         private System.Windows.Forms.OpenFileDialog FileToZipBrowser;
         private System.Windows.Forms.CheckBox RemoveSourceControlCheckBox;
+        private System.Windows.Forms.Button ViewItemsButton;
+        private System.Windows.Forms.TreeView ZipItemsView;
     }
 }
