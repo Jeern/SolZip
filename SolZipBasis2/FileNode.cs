@@ -19,7 +19,7 @@ namespace SolZipBasis2
             {
                 parent.AddChild(this);
             }
-            ReadChildren();
+            CreateChildNodes();
         }
 
         public string FullFileName 
@@ -74,7 +74,7 @@ namespace SolZipBasis2
         public IEnumerable<int> ExcludeLineNumbers()
         {
             return
-                from node in Children.SelectMany(child => child.GetLineNumbers(this),
+                from node in Children.SelectMany(child => child.GetLineNumbersInParentContent(this),
                     (child, lineNumber) => new { child.Include, lineNumber })
                 where !node.Include
                 select node.lineNumber;                
@@ -88,14 +88,14 @@ namespace SolZipBasis2
         /// </summary>
         /// <param name="parent"></param>
         /// <returns></returns>
-        public abstract List<int> GetLineNumbers(FileNode parent);
+        public abstract List<int> GetLineNumbersInParentContent(FileNode parent);
 
         /// <summary>
         /// The implementation of this abstract method should read through the content of the 
         /// object, and construct child nodes where relevant. E.g create a 3 ProjectFileNodes, if this
         /// object is a SolutionFileNode, and it contains 3 projects.
         /// </summary>
-        public abstract void ReadChildren();
+        public abstract void CreateChildNodes();
 
         private List<string> m_ContentLines;
 

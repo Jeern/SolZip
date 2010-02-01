@@ -222,5 +222,23 @@ namespace SolZipBasis2
                 }
             }
         }
+
+        /// <summary>
+        /// Iterates from the first to the last integer and returns a list of them
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="last"></param>
+        /// <returns></returns>
+        public static IEnumerable<int> GetListOfIntegers(int first, int last)
+        {
+            if (first > last)
+                throw new InvalidOperationException(string.Format("First is after last. First: {1} Last: {2}", first.ToString(), last.ToString()));
+
+            for (int i = first; i <= last; i++)
+            {
+                yield return i;
+            }
+        }
+
     }
 }

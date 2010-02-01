@@ -17,7 +17,7 @@ namespace SolZipBasis2
         /// </summary>
         /// <param name="parent"></param>
         /// <returns></returns>
-        public override List<int> GetLineNumbers(FileNode parent)
+        public override List<int> GetLineNumbersInParentContent(FileNode parent)
         {
             //A Solution file never has any parent, so this is always null
             return null;
@@ -28,7 +28,7 @@ namespace SolZipBasis2
         /// object, and construct child nodes where relevant. E.g create  3 ProjectFileNodes, if this
         /// object is a SolutionFileNode, and it contains 3 projects.
         /// </summary>
-        public override void ReadChildren()
+        public override void CreateChildNodes()
         {
             var reader = new SolutionFileReader(FullFileName);
             

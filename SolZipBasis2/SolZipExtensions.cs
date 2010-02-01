@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace SolZipBasis2
 {
@@ -27,5 +29,20 @@ namespace SolZipBasis2
                 }
             }
         }
+
+        /// <summary>
+        /// Returns the LineNumber of the XElement if no linenumber throws exception
+        /// </summary>
+        /// <param name="?"></param>
+        /// <returns></returns>
+        public static int GetLineNumber(this XNode node)
+        {
+            var lineInfo = node as IXmlLineInfo;
+            if (lineInfo == null || !lineInfo.HasLineInfo())
+                throw new InvalidOperationException("There is no line information on the XNode: " + node.ToString());
+
+            return lineInfo.LineNumber;
+        }
+
     }
 }
