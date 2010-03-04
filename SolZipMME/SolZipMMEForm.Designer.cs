@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SolZipMMEForm));
             this.FileToZipLabel = new System.Windows.Forms.Label();
             this.FileToZipTextBox = new System.Windows.Forms.TextBox();
             this.FileToZipButton = new System.Windows.Forms.Button();
@@ -225,6 +226,7 @@
             this.Controls.Add(this.FileToZipTextBox);
             this.Controls.Add(this.FileToZipLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SolZipMMEForm";
