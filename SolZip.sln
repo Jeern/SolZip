@@ -1,13 +1,19 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8F52CA03-0103-432D-89C4-1354D819BD62}"
 	ProjectSection(SolutionItems) = preProject
 		Lib\deployMSI.bat = Lib\deployMSI.bat
 		Lib\DosPrompt.JPG = Lib\DosPrompt.JPG
 		Lib\GlobalAssemblyInfo.cs = Lib\GlobalAssemblyInfo.cs
 		Lib\ICSharpCode.SharpZipLib.dll = Lib\ICSharpCode.SharpZipLib.dll
+		Lib\Microsoft.Practices.Common.dll = Lib\Microsoft.Practices.Common.dll
+		Lib\Microsoft.Practices.ComponentModel.dll = Lib\Microsoft.Practices.ComponentModel.dll
+		Lib\Microsoft.Practices.RecipeFramework.Common.dll = Lib\Microsoft.Practices.RecipeFramework.Common.dll
+		Lib\Microsoft.Practices.RecipeFramework.dll = Lib\Microsoft.Practices.RecipeFramework.dll
 		Lib\Microsoft.Practices.RecipeFramework.Extensions.dll = Lib\Microsoft.Practices.RecipeFramework.Extensions.dll
+		Lib\Microsoft.Practices.RecipeFramework.Library.dll = Lib\Microsoft.Practices.RecipeFramework.Library.dll
+		Lib\MMEContracts.dll = Lib\MMEContracts.dll
 		Lib\SolZip.ico = Lib\SolZip.ico
 		Lib\SolZip.png = Lib\SolZip.png
 		Lib\SolZip128.ico = Lib\SolZip128.ico
@@ -26,21 +32,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8F52CA03-010
 		Lib\SolZipMME2.jpg = Lib\SolZipMME2.jpg
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipGuidanceGAT", "SolZipGuidanceGAT\SolZipGuidanceGAT.csproj", "{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}"
-	ProjectSection(ProjectDependencies) = postProject
-		{E29E128A-8211-47F8-95E4-B914181215D2} = {E29E128A-8211-47F8-95E4-B914181215D2}
-		{BFF3F2EC-983C-4E3A-90B8-137879C25211} = {BFF3F2EC-983C-4E3A-90B8-137879C25211}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipGuidanceGATInstaller", "SolZipGuidanceGATInstaller\SolZipGuidanceGATInstaller.csproj", "{BFF3F2EC-983C-4E3A-90B8-137879C25211}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SolZipGuidanceGATSetup", "SolZipGuidanceGATSetup\SolZipGuidanceGATSetup.vdproj", "{E218F721-46C4-453F-9E05-918F20DC33B5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipGuidance", "SolZipGuidance\SolZipGuidance.csproj", "{E29E128A-8211-47F8-95E4-B914181215D2}"
-	ProjectSection(ProjectDependencies) = postProject
-		{BFF3F2EC-983C-4E3A-90B8-137879C25211} = {BFF3F2EC-983C-4E3A-90B8-137879C25211}
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolZipBasis", "SolZipBasis", "{DC485C6B-78E2-4120-9743-0D111C4EF66F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolZipCmd", "SolZipCmd", "{BBF2B885-67FD-47B0-BA89-A1722282A8A7}"
@@ -51,18 +42,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolZipManagedMenuExtension"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{DAB728E8-33C0-428A-B62F-E75BC625EEEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipMME", "SolZipMME\SolZipMME.csproj", "{071FF9E2-A519-4602-BCD6-59961AE90E60}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SolZipMMESetup", "SolZipMMESetup\SolZipMMESetup.vdproj", "{56F41056-E678-4230-8AAA-0ACF73A7F2D1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipMMEInstaller", "SolZipMMEInstaller\SolZipMMEInstaller.csproj", "{2ABEE8C2-411C-4F5B-A622-B3A29940FA5C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F36ED2E9-DD4B-488F-B4FF-F07603AAC047}"
 	ProjectSection(SolutionItems) = preProject
 		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
 		SolZip.vsmdi = SolZip.vsmdi
 		SolZip1.vsmdi = SolZip1.vsmdi
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MMEItems", "MMEItems", "{E9C1F392-F532-4149-99F5-E1EC367C8386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipGuidance", "SolZipGuidance\SolZipGuidance.csproj", "{E29E128A-8211-47F8-95E4-B914181215D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipMME", "SolZipMME\SolZipMME.csproj", "{071FF9E2-A519-4602-BCD6-59961AE90E60}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SolZipMMESetup", "SolZipMMESetup\SolZipMMESetup.vdproj", "{56F41056-E678-4230-8AAA-0ACF73A7F2D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipMMEInstaller", "SolZipMMEInstaller\SolZipMMEInstaller.csproj", "{2ABEE8C2-411C-4F5B-A622-B3A29940FA5C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipBasis", "SolZipBasis\SolZipBasis.csproj", "{FAECC790-26DC-4948-AF3A-D2EB9D750B16}"
 EndProject
@@ -72,24 +67,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZip", "SolZip\SolZip.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipInstaller", "SolZipInstaller\SolZipInstaller.csproj", "{1464424A-F821-4342-8DE3-B59EA35334C5}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SolZipSetup", "SolZipSetup\SolZipSetup.vdproj", "{6846E82A-9EA1-4B36-9432-8BC2BA0C9F05}"
-EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SolZipMMESingleInstallSetup", "SolZipMMESingleInstallSetup\SolZipMMESingleInstallSetup.vdproj", "{B436D852-184F-4E36-A62E-01B9A69B61BE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MMEItems", "MMEItems", "{E9C1F392-F532-4149-99F5-E1EC367C8386}"
-	ProjectSection(SolutionItems) = preProject
-		MMEItems\ManagedMenuAddInAdapters.dll = MMEItems\ManagedMenuAddInAdapters.dll
-		MMEItems\ManagedMenuAddInManagerWinForm.exe = MMEItems\ManagedMenuAddInManagerWinForm.exe
-		MMEItems\ManagedMenuAddInViews.dll = MMEItems\ManagedMenuAddInViews.dll
-		MMEItems\ManagedMenuContracts.dll = MMEItems\ManagedMenuContracts.dll
-		MMEItems\ManagedMenuHost.dll = MMEItems\ManagedMenuHost.dll
-		MMEItems\ManagedMenuHostAdapters.dll = MMEItems\ManagedMenuHostAdapters.dll
-		MMEItems\ManagedMenuHostViews.dll = MMEItems\ManagedMenuHostViews.dll
-		MMEItems\ManagedMenusVS2008.AddIn = MMEItems\ManagedMenusVS2008.AddIn
-		MMEItems\ManagedMenuVS2008.dll = MMEItems\ManagedMenuVS2008.dll
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolZipBasis2", "SolZipBasis2\SolZipBasis2.csproj", "{E2E47C21-67C4-4A74-A9C6-B85AC342608A}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SolZipSetup2", "SolZipSetup2\SolZipSetup2.vdproj", "{D8DEE1B1-E6FB-47A9-89CA-C8E2DFF00AF7}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -100,17 +80,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFF3F2EC-983C-4E3A-90B8-137879C25211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFF3F2EC-983C-4E3A-90B8-137879C25211}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFF3F2EC-983C-4E3A-90B8-137879C25211}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFF3F2EC-983C-4E3A-90B8-137879C25211}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E218F721-46C4-453F-9E05-918F20DC33B5}.Debug|Any CPU.ActiveCfg = Debug
-		{E218F721-46C4-453F-9E05-918F20DC33B5}.Release|Any CPU.ActiveCfg = Release
-		{E218F721-46C4-453F-9E05-918F20DC33B5}.Release|Any CPU.Build.0 = Release
 		{E29E128A-8211-47F8-95E4-B914181215D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E29E128A-8211-47F8-95E4-B914181215D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E29E128A-8211-47F8-95E4-B914181215D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -142,31 +111,21 @@ Global
 		{1464424A-F821-4342-8DE3-B59EA35334C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1464424A-F821-4342-8DE3-B59EA35334C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1464424A-F821-4342-8DE3-B59EA35334C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6846E82A-9EA1-4B36-9432-8BC2BA0C9F05}.Debug|Any CPU.ActiveCfg = Debug
-		{6846E82A-9EA1-4B36-9432-8BC2BA0C9F05}.Debug|Any CPU.Build.0 = Debug
-		{6846E82A-9EA1-4B36-9432-8BC2BA0C9F05}.Release|Any CPU.ActiveCfg = Release
-		{6846E82A-9EA1-4B36-9432-8BC2BA0C9F05}.Release|Any CPU.Build.0 = Release
 		{B436D852-184F-4E36-A62E-01B9A69B61BE}.Debug|Any CPU.ActiveCfg = Debug
 		{B436D852-184F-4E36-A62E-01B9A69B61BE}.Release|Any CPU.ActiveCfg = Release
 		{B436D852-184F-4E36-A62E-01B9A69B61BE}.Release|Any CPU.Build.0 = Release
-		{E2E47C21-67C4-4A74-A9C6-B85AC342608A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2E47C21-67C4-4A74-A9C6-B85AC342608A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2E47C21-67C4-4A74-A9C6-B85AC342608A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2E47C21-67C4-4A74-A9C6-B85AC342608A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8DEE1B1-E6FB-47A9-89CA-C8E2DFF00AF7}.Debug|Any CPU.ActiveCfg = Debug
+		{D8DEE1B1-E6FB-47A9-89CA-C8E2DFF00AF7}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{BFF3F2EC-983C-4E3A-90B8-137879C25211} = {71F99720-6D38-47C4-BB51-DA673D5F2615}
-		{E218F721-46C4-453F-9E05-918F20DC33B5} = {71F99720-6D38-47C4-BB51-DA673D5F2615}
-		{E29E128A-8211-47F8-95E4-B914181215D2} = {71F99720-6D38-47C4-BB51-DA673D5F2615}
-		{E8BBC1E1-3E53-426A-98E9-CA4D40BA9086} = {71F99720-6D38-47C4-BB51-DA673D5F2615}
 		{FAECC790-26DC-4948-AF3A-D2EB9D750B16} = {DC485C6B-78E2-4120-9743-0D111C4EF66F}
-		{E2E47C21-67C4-4A74-A9C6-B85AC342608A} = {DC485C6B-78E2-4120-9743-0D111C4EF66F}
 		{96D469EA-57F6-4320-9DDC-5B58C0E0A34F} = {BBF2B885-67FD-47B0-BA89-A1722282A8A7}
 		{1464424A-F821-4342-8DE3-B59EA35334C5} = {BBF2B885-67FD-47B0-BA89-A1722282A8A7}
-		{6846E82A-9EA1-4B36-9432-8BC2BA0C9F05} = {BBF2B885-67FD-47B0-BA89-A1722282A8A7}
+		{D8DEE1B1-E6FB-47A9-89CA-C8E2DFF00AF7} = {BBF2B885-67FD-47B0-BA89-A1722282A8A7}
+		{E29E128A-8211-47F8-95E4-B914181215D2} = {71F99720-6D38-47C4-BB51-DA673D5F2615}
 		{071FF9E2-A519-4602-BCD6-59961AE90E60} = {A78F2F73-190B-4DDE-8C30-4797B10D0B04}
 		{56F41056-E678-4230-8AAA-0ACF73A7F2D1} = {A78F2F73-190B-4DDE-8C30-4797B10D0B04}
 		{2ABEE8C2-411C-4F5B-A622-B3A29940FA5C} = {A78F2F73-190B-4DDE-8C30-4797B10D0B04}

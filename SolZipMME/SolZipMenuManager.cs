@@ -2,40 +2,38 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.AddIn;
-using ManagedMenuAddInViews;
 using System.Windows.Forms;
 using System.IO;
 using SolZipBasis;
+using MMEContracts;
 
 namespace SolZipMME
 {
-    [AddIn("SolZipManagedAddIn", Version = "1.2.0.5")]
-    public class SolZipMenuManager : MenuManagerAddInView 
+    public class SolZipMenuManager : IMenuManager 
     {
-        public override List<MenuItemView> CreateMenus(MenuContextView context)
+        public IEnumerable<IMenuItem> GetMenus(ContextLevels menuForLevel)
         {
-            if (context.Levels == ContextLevels.Solution || 
-                context.Levels == ContextLevels.Project || // context.FileName.EndsWith(SolZipConstants.ProjectExtension))  
-                context.Levels == ContextLevels.Item)
+            var menuItems = new List<IMenuItem>();
+            if (menuForLevel == ContextLevels.Solution ||
+                menuForLevel == ContextLevels.Project || // context.FileName.EndsWith(SolZipConstants.ProjectExtension))  
+                menuForLevel == ContextLevels.Item)
             {
-                return new List<MenuItemView>() { new SolZipMenuItem("Compress with Zip...") };
+                var item = new MMEContracts.MenuItem("Compress with Zip");
+                item.Click += MenuClicked;
+                menuItems.Add(item);
             }
-            return null;
+            return menuItems;
         }
 
-        public override string MainMenu(ApplicationTypes types)
+        private void MenuClicked(object sender, EventArgs<IMenuContext> e)
         {
-            if (types != ApplicationTypes.VS2008)
-                return null;
-          
-            return "SolZip (MME)";
-        }
-
-        public override void MenuClicked(MenuItemView clickedMenu, MenuContextView menuContext)
-        {
-            var zipitForm = new SolZipMMEForm(menuContext.FullPath);
+            var zipitForm = new SolZipMMEForm(e.Data.FullFileName);
             zipitForm.ShowDialog();
+        }
+
+        public string MainMenu()
+        {
+            return "SolZip";
         }
     }
 }
