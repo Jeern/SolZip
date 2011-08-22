@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <GuidancePackage xmlns="http://schemas.microsoft.com/pag/gax-core"
                  xmlns:xi="http://www.w3.org/2001/XInclude"
-    Name="SolZipGuidanceGAT" 
+    Name="SolZipGuidance" 
     Caption="SolZipGuidance"
     Description="Guidance for zipping solutions, C# projects, Setup projects and files"
     BindingRecipe="BindingRecipe"
     Guid="575C7ED8-18AA-4922-894E-A509A18B2780"
-    Version="1.2"
-    SchemaVersion="1.0">
+    SchemaVersion="1.0" >
+  <!--Version="1.0" ignored in VS2010 uses VSIX version instead -->
   <HostData>
-    <RegistrationSettings>/Hive=9.0Exp /RANU</RegistrationSettings>
     <Menu Name="SZGItem" Text="SolZip" Priority="1">
       <CommandBar Name="Item"/>
     </Menu>
