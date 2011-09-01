@@ -60,7 +60,7 @@ namespace SolZipBasis
                 files = reader.GetRelevantItemsFullFileNames();
                 foreach (string file in files)
                 {
-                    if (file.EndsWith(SolZipConstants.ProjectExtension))
+                    if (file.EndsWith(SolZipConstants.ProjectExtension) || file.EndsWith(SolZipConstants.ContentProjectExtension))
                     {
                         ZipProject(file);
                     }
@@ -95,7 +95,7 @@ namespace SolZipBasis
 
         public void ZipProject(string projectFile)
         {
-            if (!projectFile.EndsWith(SolZipConstants.ProjectExtension))
+            if (!projectFile.EndsWith(SolZipConstants.ProjectExtension) && !projectFile.EndsWith(SolZipConstants.ContentProjectExtension))
                 throw new ArgumentException(
                     string.Format("ZipProject can only zip {0} files - not {1}", 
                         SolZipConstants.ProjectExtension, projectFile), "projectFile");
@@ -207,7 +207,7 @@ namespace SolZipBasis
             if (Path.GetExtension(fileName) == SolZipConstants.SolutionExtension)
                 return ReadSolutionFile(fileName);
 
-            if (Path.GetExtension(fileName) == SolZipConstants.ProjectExtension)
+            if (Path.GetExtension(fileName) == SolZipConstants.ProjectExtension || Path.GetExtension(fileName) == SolZipConstants.ContentProjectExtension)
                 return ReadProjectFile(fileName);
 
             return ReadFileWorker(fileName);

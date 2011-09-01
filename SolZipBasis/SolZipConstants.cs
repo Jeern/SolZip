@@ -14,6 +14,7 @@ namespace SolZipBasis
         public const string ItemSuffix = "Item";
         public const string ProjectArgument = "/project";
         public const string ProjectExtension = ".csproj";
+        public const string ContentProjectExtension = ".contentproj";
         public const string ProjectSuffix = "Project";
         public const string SetupProjectExtension = ".vdproj";
         public const string SolutionArgument = "/solution";
