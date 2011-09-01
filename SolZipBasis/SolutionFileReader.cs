@@ -55,7 +55,8 @@ namespace SolZipBasis
             IEnumerable<string> solutionItems = GetSolutionItems(allLines);
             IEnumerable<string> csharpProjectItems = GetCsharpProjectItems(allLines);
             IEnumerable<string> setupProjectItems = GetSetupProjectItems(allLines);
-            return solutionItems.Union(csharpProjectItems.Union(setupProjectItems)); 
+            IEnumerable<string> contentProjectItems = GetContentProjectItems(allLines);
+            return solutionItems.Union(csharpProjectItems.Union(setupProjectItems.Union(contentProjectItems))); 
         }
 
         private string GetItemFromTo(string line, string from, string to)
@@ -91,6 +92,16 @@ namespace SolZipBasis
             }
         }
 
+        private IEnumerable<string> GetContentProjectItems(IEnumerable<string> lines)
+        {
+            IEnumerable<string> projectLines = GetContentProjectLines(lines);
+            foreach (string line in projectLines)
+            {
+                yield return GetItemFromTo(line, "\"", SolZipConstants.ContentProjectExtension);
+            }
+        }
+
+
         public IEnumerable<string> GetCsharpProjectItems()
         {
             return GetCsharpProjectItems(TrimLines(GetAllLines()));
@@ -101,6 +112,11 @@ namespace SolZipBasis
             return GetLineContaining(lines, SolZipConstants.ProjectExtension +  "\"");
         }
 
+        private IEnumerable<string> GetContentProjectLines(IEnumerable<string> lines)
+        {
+            return GetLineContaining(lines, SolZipConstants.ContentProjectExtension +  "\"");
+        }
+        
         private IEnumerable<string> GetSetupProjectItems(IEnumerable<string> lines)
         {
             IEnumerable<string> projectLines = GetSetupProjectLines(lines);
