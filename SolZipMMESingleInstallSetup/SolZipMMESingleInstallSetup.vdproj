@@ -1180,7 +1180,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SolZipMME"
         "ProductCode" = "8:{1F46367D-6F03-4CEF-B1A0-F55AADE7F159}"
-        "PackageCode" = "8:{0B524261-40DE-4A5C-89B5-C3C46D8E6423}"
+        "PackageCode" = "8:{7194ED05-7E2C-4274-A65E-1822CD94CA27}"
         "UpgradeCode" = "8:{648DC30F-744B-4434-869B-F527D5FEB1DD}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
